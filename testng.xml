@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Tests Suite">
+    <test name="C:/Users/jinx_/Desktop/Orangehrm">
+        <classes>
+            <class name="loginflow.positive.LoginFlowPositiveTest"/>
+        </classes>
+
+    </test>
+</suite>
