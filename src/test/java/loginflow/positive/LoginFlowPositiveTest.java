@@ -9,6 +9,8 @@ public class LoginFlowPositiveTest extends BaseTest {
         basePage.openLoginPage();
         loginPage.enterUserCredentials()
                  .clickLoginButton();
+        dashboardPage.checkUrl()
+                     .checkPageTitle();
     }
 
 }

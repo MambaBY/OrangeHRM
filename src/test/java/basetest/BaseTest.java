@@ -5,6 +5,7 @@ import com.codeborne.selenide.Selenide;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import pages.basepage.BasePage;
+import pages.dashboard.DashboardPage;
 import pages.loginpage.OrangeHrmLoginPage;
 
 import static common.Config.CLEAR_COOKIES_AND_STORAGE;
@@ -13,6 +14,8 @@ import static common.Config.HOLD_BROWSER_CLOSED;
 public class BaseTest {
     public BasePage basePage = new BasePage();
     public OrangeHrmLoginPage loginPage = new OrangeHrmLoginPage();
+    public DashboardPage dashboardPage = new DashboardPage();
+
 
     @AfterTest
     public void clearCookieAndLocalStorage () {
