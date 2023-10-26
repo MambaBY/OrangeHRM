@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5db264f4-b8e5-4964-9d6a-a000f2a8d702" name="Changes" comment="Updated testNG file" />
+    <list default="true" id="5db264f4-b8e5-4964-9d6a-a000f2a8d702" name="Changes" comment="Updated testNG file">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +63,22 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.C:/Users/jinx_/Desktop/Orangehrm/testng.xml">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jinx_\Desktop\Orangehrm\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml">
+    <configuration name="C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Orangehrm" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/LoginTest.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="C:/Users/jinx_/Desktop/Orangehrm/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Orangehrm" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
@@ -109,25 +128,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test.Test" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Orangehrm" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test" />
-      <option name="METHOD_NAME" value="Test" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml" />
         <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/testng.xml" />
         <item itemvalue="TestNG.LoginFlowPositiveTest" />
         <item itemvalue="TestNG.FirstTest" />
         <item itemvalue="TestNG.Test" />
-        <item itemvalue="TestNG.Test.Test" />
       </list>
     </recent_temporary>
   </component>
