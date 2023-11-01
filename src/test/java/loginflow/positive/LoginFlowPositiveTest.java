@@ -1,18 +1,27 @@
 package loginflow.positive;
 
 import basetest.BaseTest;
+import com.codeborne.selenide.testng.ScreenShooter;
+import io.qameta.allure.Owner;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
+
+@Listeners({ ScreenShooter.class})
 public class LoginFlowPositiveTest extends BaseTest {
+
     @Test
-    public void loginFlowPositive(){
+    @Owner("spaulovich")
+    public void loginFlowPositive()  {
         basePage.openLoginPage();
         loginPage.enterUserLogin()
-                 .enterUserPassword()
-                 .clickLoginButton();
+                .enterUserPassword()
+                .clickLoginButton();
         dashboardPage.checkUrl()
-                     .checkPageTitle()
-                     .checkUserDropdown();
-    }
+                .checkPageTitle()
+                .checkUserDropdown();
 
+    }
 }
