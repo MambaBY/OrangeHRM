@@ -7,8 +7,6 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
-
 
 @Listeners({ ScreenShooter.class})
 public class LoginFlowNegativeTest extends BaseTest {
@@ -29,7 +27,6 @@ public class LoginFlowNegativeTest extends BaseTest {
                  .enterInvalidUserPassword(invalidPassword)
                  .clickLoginButton()
                  .checkInavalidCredentialsAlert();
-
     }
 
 

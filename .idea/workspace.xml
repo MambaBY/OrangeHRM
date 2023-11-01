@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/basepage/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/basepage/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/loginpage/OrangeHrmLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/loginpage/OrangeHrmLoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/loginflow/negative/LoginFlowNegativeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/loginflow/negative/LoginFlowNegativeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/loginflow/positive/LoginFlowPositiveTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/loginflow/positive/LoginFlowPositiveTest.java" afterDir="false" />

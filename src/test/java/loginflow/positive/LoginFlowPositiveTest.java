@@ -6,8 +6,6 @@ import io.qameta.allure.Owner;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
-
 
 @Listeners({ ScreenShooter.class})
 public class LoginFlowPositiveTest extends BaseTest {

@@ -49,7 +49,7 @@ public class BaseTest {
 
 
     @AfterTest
-    public void clearCookieAndLocalStorage () throws IOException {
+    public void clearCookieAndLocalStorage () {
         if(CLEAR_COOKIES_AND_STORAGE){
             Selenide.clearBrowserCookies();
             Selenide.clearBrowserLocalStorage();
@@ -61,11 +61,5 @@ public class BaseTest {
     public void close (){
         Configuration.holdBrowserOpen = HOLD_BROWSER_CLOSED;
     }
-
-
-
-
-
-
 
 }
