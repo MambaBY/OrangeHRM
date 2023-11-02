@@ -63,7 +63,4 @@ public class OrangeHrmLoginPage extends BasePage {
         invalidCredentialsAlert.shouldHave(Condition.exactText("Invalid credentials"));
         return this;
     }
-
-
-
 }

@@ -39,14 +39,15 @@ public class BaseTest {
 
     }
 
+    /*
+    /* Method for saving screenshot in the Allure report
+     */
     @AfterMethod
     @Attachment(value = "Screenshot", type = "image/png", fileExtension = ".png")
     public static byte[] takeScreenshot() throws IOException {
         File screenshot = Screenshots.getLastScreenshot();
         return screenshot == null ? null : Files.toByteArray(screenshot);
     }
-
-
 
     @AfterTest
     public void clearCookieAndLocalStorage () {

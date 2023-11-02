@@ -67,7 +67,6 @@
       <version>7.0.1</version>
       <scope>test</scope>
     </dependency>
-
   </dependencies>
   <build>
     <plugins>
@@ -79,9 +78,7 @@
           <target>8</target>
         </configuration>
       </plugin>
-
-
-<!--      Allure-->
+<!--Plagins for Allure report -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>

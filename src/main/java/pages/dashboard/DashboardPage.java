@@ -17,14 +17,14 @@ public class DashboardPage {
     /*
      * Method is verifying page URL
      */
-    public DashboardPage checkUrl(){
+    public DashboardPage checkPageUrlAdress(){
         webdriver().shouldHave(url("https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index"));
         return this;
     }
 
 
     /*
-     * Method is verifying that page title is Dashboard
+     * Method is verifying page title
      */
     public DashboardPage checkPageTitle(){
        pageTitle.shouldBe(Condition.visible);

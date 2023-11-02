@@ -9,7 +9,7 @@ public class Config {
 
     /**
      * To keep browser open after suit
-     * if true - browser close
+     * if false - browser close
      */
     public static final Boolean HOLD_BROWSER_CLOSED = false;
 }
