@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5db264f4-b8e5-4964-9d6a-a000f2a8d702" name="Changes" comment="Updated testNG file">
+      <change afterPath="$PROJECT_DIR$/src/test/java/loginviacookies/LogInWithCookiesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/LoginTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/loginpage/OrangeHrmLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/loginpage/OrangeHrmLoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/loginflow/negative/LoginFlowNegativeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/loginflow/negative/LoginFlowNegativeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/loginflow/positive/LoginFlowPositiveTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/loginflow/positive/LoginFlowPositiveTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,11 +93,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LogInWithCookiesTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Orangehrm" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="FirstTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="loginviacookies.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="loginviacookise" />
+      <option name="MAIN_CLASS_NAME" value="loginviacookies.LogInWithCookiesTest" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LogInWithCookiesTest.logInWithCookies" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Orangehrm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="loginviacookies.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="loginviacookise" />
+      <option name="MAIN_CLASS_NAME" value="loginviacookies.LogInWithCookiesTest" />
+      <option name="METHOD_NAME" value="logInWithCookies" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -119,24 +145,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Orangehrm" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Test" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml" />
+        <item itemvalue="TestNG.LogInWithCookiesTest" />
+        <item itemvalue="TestNG.LogInWithCookiesTest.logInWithCookies" />
         <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/testng.xml" />
         <item itemvalue="TestNG.LoginFlowPositiveTest" />
-        <item itemvalue="TestNG.FirstTest" />
-        <item itemvalue="TestNG.Test" />
       </list>
     </recent_temporary>
   </component>

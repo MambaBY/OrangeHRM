@@ -27,6 +27,7 @@ public class BaseTest {
     public DashboardPage dashboardPage = new DashboardPage();
 
 
+
     @BeforeSuite
     public void setUp() {
         Configuration.browser = "chrome";

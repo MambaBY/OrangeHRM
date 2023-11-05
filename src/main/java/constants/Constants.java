@@ -11,4 +11,10 @@ public class Constants {
         public static final String PASSWORD = "admin123";
 
     }
+
+    public static class Cookies{
+        public static final String LOG_IN_COOKIES_NAME = "orangehrm";
+        public static final String LOG_IN_COOKIES_VALUE = "ee91b14645e18e11a6bce3300520f3fe";
+        public static final String LOG_IN_COOKIES_PATH = "/web";
+    }
 }
