@@ -22,7 +22,8 @@ public class AddNewUserTest extends BaseTest {
         pimPage.checkIfAddButtonVisible()
                .clickAddButton();
         addEmployeePage.fillInFirstName()
-                        .fillInLastName();
+                        .fillInLastName()
+                        .clickLoginDetailsToggle();
         takeScreenshot();
 
     }
