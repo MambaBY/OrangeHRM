@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5db264f4-b8e5-4964-9d6a-a000f2a8d702" name="Changes" comment="Updated testNG file">
-      <change afterPath="$PROJECT_DIR$/src/test/java/loginviacookies/LogInWithCookiesTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/common/LeftMenuButtons.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/pim/PimPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/addnewuser/AddNewUserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LoginTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/LoginTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/loginpage/OrangeHrmLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/loginpage/OrangeHrmLoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/basepage/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/basepage/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +73,24 @@
       <recent name="C:\Users\jinx_\Desktop\Orangehrm\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml">
+  <component name="RunManager" selected="TestNG.AddNewUserTest">
+    <configuration name="AddNewUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Orangehrm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="addnewuser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="addnewuser" />
+      <option name="MAIN_CLASS_NAME" value="addnewuser.AddNewUserTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Orangehrm" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/LoginTest.xml" />
@@ -128,30 +146,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginFlowPositiveTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Orangehrm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="loginflow.positive.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="loginflow.positive" />
-      <option name="MAIN_CLASS_NAME" value="loginflow.positive.LoginFlowPositiveTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AddNewUserTest" />
         <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml" />
         <item itemvalue="TestNG.LogInWithCookiesTest" />
         <item itemvalue="TestNG.LogInWithCookiesTest.logInWithCookies" />
         <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/testng.xml" />
-        <item itemvalue="TestNG.LoginFlowPositiveTest" />
       </list>
     </recent_temporary>
   </component>

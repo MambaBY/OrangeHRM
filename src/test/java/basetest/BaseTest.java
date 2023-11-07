@@ -12,6 +12,7 @@ import org.testng.annotations.*;
 import pages.basepage.BasePage;
 import pages.dashboard.DashboardPage;
 import pages.loginpage.OrangeHrmLoginPage;
+import pages.pim.PimPage;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,6 +26,7 @@ public class BaseTest {
     public BasePage basePage = new BasePage();
     public OrangeHrmLoginPage loginPage = new OrangeHrmLoginPage();
     public DashboardPage dashboardPage = new DashboardPage();
+    public PimPage pimPage = new PimPage();
 
 
 

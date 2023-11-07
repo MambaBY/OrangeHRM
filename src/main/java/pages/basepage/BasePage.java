@@ -1,4 +1,6 @@
 package pages.basepage;
+import com.codeborne.selenide.SelenideElement;
+
 import static com.codeborne.selenide.Selenide.open;
 import static constants.Constants.Urls.LOGIN_PAGE;
 
@@ -7,4 +9,11 @@ public class BasePage {
         open(LOGIN_PAGE);
     }
 
+    public void clickLeftSideMenuButton(SelenideElement menuSelector) {
+        menuSelector.click();
+    }
+
 }
+
+
+
