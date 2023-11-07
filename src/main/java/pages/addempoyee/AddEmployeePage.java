@@ -10,9 +10,6 @@ public class AddEmployeePage extends BasePage {
     public final SelenideElement lastNameInput = $x("//input[@name='lastName']");
     public final SelenideElement createLoginDetailsToggle = $x("//div[@class='oxd-switch-wrapper']");
 
-    //div[@class='oxd-switch-wrapper']
-
-
     public AddEmployeePage fillInFirstName () {
         firstNameInput.setValue("John"); //TBD: name is set via a parameter
         return this;
