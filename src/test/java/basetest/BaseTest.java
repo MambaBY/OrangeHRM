@@ -9,6 +9,7 @@ import com.google.common.io.Files;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.testng.annotations.*;
+import pages.addempoyee.AddEmployeePage;
 import pages.basepage.BasePage;
 import pages.dashboard.DashboardPage;
 import pages.loginpage.OrangeHrmLoginPage;
@@ -27,6 +28,7 @@ public class BaseTest {
     public OrangeHrmLoginPage loginPage = new OrangeHrmLoginPage();
     public DashboardPage dashboardPage = new DashboardPage();
     public PimPage pimPage = new PimPage();
+    public AddEmployeePage addEmployeePage = new AddEmployeePage();
 
 
 
