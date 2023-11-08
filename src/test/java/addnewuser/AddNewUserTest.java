@@ -23,7 +23,8 @@ public class AddNewUserTest extends BaseTest {
                .clickAddButton();
         addEmployeePage.fillInFirstName()
                         .fillInLastName()
-                        .clickLoginDetailsToggle();
+                        .clickLoginDetailsToggle()
+                        .fillInUsername();
         takeScreenshot();
 
     }

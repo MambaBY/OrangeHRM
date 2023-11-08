@@ -5,7 +5,7 @@ import com.codeborne.selenide.SelenideElement;
 import pages.basepage.BasePage;
 
 import static com.codeborne.selenide.Selenide.$x;
-import static com.codeborne.selenide.Selenide.sleep;
+
 
 public class PimPage extends BasePage {
     private final SelenideElement addButton = $x("//button[text()=' Add ']");

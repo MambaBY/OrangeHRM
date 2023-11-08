@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5db264f4-b8e5-4964-9d6a-a000f2a8d702" name="Changes" comment="Updated testNG file">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/addempoyee/AddEmployeePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/addempoyee/AddEmployeePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/addempoyee/AddEmployeePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/basepage/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/basepage/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/pim/PimPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/pim/PimPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/addnewuser/AddNewUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/addnewuser/AddNewUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/loginflow/negative/LoginFlowNegativeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/loginflow/negative/LoginFlowNegativeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

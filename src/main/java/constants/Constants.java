@@ -14,7 +14,7 @@ public class Constants {
 
     public static class Cookies{
         public static final String LOG_IN_COOKIES_NAME = "orangehrm";
-        public static final String LOG_IN_COOKIES_VALUE = "b92c8544e6272b1b4fe93b216bd90230";
+        public static final String LOG_IN_COOKIES_VALUE = "2b86246e2854116d36cb0e6d5a145b4f";
         public static final String LOG_IN_COOKIES_PATH = "/web";
     }
 }

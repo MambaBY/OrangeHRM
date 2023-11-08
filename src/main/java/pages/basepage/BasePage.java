@@ -13,7 +13,6 @@ public class BasePage {
     public void clickLeftSideMenuButton(SelenideElement menuSelector) {
         menuSelector.click();
     }
-
 }
 
 
