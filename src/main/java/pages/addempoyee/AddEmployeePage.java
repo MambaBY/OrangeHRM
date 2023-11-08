@@ -11,7 +11,9 @@ public class AddEmployeePage extends BasePage {
     public final SelenideElement createLoginDetailsToggle = $x("//div[@class='oxd-switch-wrapper']");
     public final SelenideElement usernameInput =
             $x("(//div[@class='oxd-form-row'])[2]//input[@data-v-1f99f73c]");
-    public final SelenideElement passwordInput = $x("//input[@type = 'password']");
+    public final SelenideElement passwordInput = $x("(//input[@type = 'password'])[1]");
+
+    public final SelenideElement confirmPasswordInput = $x("(//input[@type = 'password'])[2]");
 
 
 
