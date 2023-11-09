@@ -1,4 +1,4 @@
-package addnewuser;
+package endtoend.addnewuser;
 
 import basetest.BaseTest;
 import com.codeborne.selenide.testng.ScreenShooter;
@@ -21,11 +21,13 @@ public class AddNewUserTest extends BaseTest {
         basePage.clickLeftSideMenuButton(pimMenu);
         pimPage.checkIfAddButtonVisible()
                .clickAddButton();
-        addEmployeePage.fillInFirstName()
+        addEmployeePage.checkAddEmployeePageUrlAdress()
+                        .fillInFirstName()
                         .fillInLastName()
                         .clickLoginDetailsToggle()
-                        .fillInUsername();
+                        .fillInUsername()
+                        .fillInPassword()
+                        .fillInPasswordConfirmation();
         takeScreenshot();
-
     }
 }

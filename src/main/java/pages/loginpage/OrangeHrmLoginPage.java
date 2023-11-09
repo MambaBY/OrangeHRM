@@ -4,16 +4,16 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
-import org.openqa.selenium.Cookie;
 import pages.basepage.BasePage;
 
-import static com.codeborne.selenide.Selenide.*;
-import static constants.Constants.Cookies.*;
+import static com.codeborne.selenide.Selenide.$x;
+import static common.Cookie.authorizationCookieName;
+import static common.Cookie.authorizationCookieValue;
 import static constants.Constants.UserCredentials.LOGIN;
 import static constants.Constants.UserCredentials.PASSWORD;
 
-public class OrangeHrmLoginPage extends BasePage {
 
+public class OrangeHrmLoginPage extends BasePage {
     private final SelenideElement loginInput = $x("//input[@name='username']");
     private final SelenideElement passwordInput = $x("//input[@name='password']");
     private final SelenideElement loginButton = $x("//button[@type='submit']");
@@ -73,8 +73,8 @@ public class OrangeHrmLoginPage extends BasePage {
      */
     public OrangeHrmLoginPage logInWithCookies() {
         openLoginPage();
-        Cookie logInCookies = new Cookie(LOG_IN_COOKIES_NAME, LOG_IN_COOKIES_VALUE, LOG_IN_COOKIES_PATH);
-        WebDriverRunner.getWebDriver().manage().addCookie(logInCookies);
+        WebDriverRunner.getWebDriver().manage().deleteCookieNamed(authorizationCookieName);
+        WebDriverRunner.getWebDriver().manage().addCookie(authorizationCookieValue);
         Selenide.refresh();
         return this;
     }

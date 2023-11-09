@@ -6,10 +6,10 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.webdriver;
-import static com.codeborne.selenide.WebDriverConditions.*;
+import static com.codeborne.selenide.WebDriverConditions.url;
+import static constants.Constants.Urls.DASHBOARD_PAGE;
 
 public class DashboardPage {
-
     public final SelenideElement pageTitle = $x("//span[@class='oxd-topbar-header-breadcrumb']");
     public final SelenideElement userDropdown = $x("//li[@class='oxd-userdropdown']");
 
@@ -17,8 +17,8 @@ public class DashboardPage {
     /*
      * Method is verifying page URL
      */
-    public DashboardPage checkPageUrlAdress(){
-        webdriver().shouldHave(url("https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index"));
+    public DashboardPage checkDashboardPageUrlAdress(){
+        webdriver().shouldHave(url(DASHBOARD_PAGE));
         return this;
     }
 
@@ -32,6 +32,7 @@ public class DashboardPage {
        return this;
     }
 
+
     /*
      * Method is verifying that user label with dropdown is visible on the Dashboard page after user logged in
      */
@@ -39,6 +40,4 @@ public class DashboardPage {
         userDropdown.shouldBe(Condition.visible);
         return this;
     }
-
-
 }

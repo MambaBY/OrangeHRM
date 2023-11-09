@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5db264f4-b8e5-4964-9d6a-a000f2a8d702" name="Changes" comment="Updated testNG file">
+    <list default="true" id="5db264f4-b8e5-4964-9d6a-a000f2a8d702" name="Changes" comment="Deleted unused xpath">
+      <change afterPath="$PROJECT_DIR$/src/main/java/common/Cookie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/addempoyee/AddEmployeePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/addempoyee/AddEmployeePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/basepage/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/basepage/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/dashboard/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/dashboard/DashboardPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/loginpage/OrangeHrmLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/loginpage/OrangeHrmLoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/pim/PimPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/pim/PimPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/addnewuser/AddNewUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/endtoend/addnewuser/AddNewUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/loginflow/positive/LoginFlowPositiveTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/loginflow/positive/LoginFlowPositiveTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/loginviacookies/LogInWithCookiesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/loginviacookies/LogInWithCookiesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +77,24 @@
       <recent name="C:\Users\jinx_\Desktop\Orangehrm\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AddNewUserTest">
+  <component name="RunManager" selected="TestNG.C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml">
+    <configuration name="AddNewUserTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Orangehrm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="endtoend.addnewuser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="endtoend.addnewuser" />
+      <option name="MAIN_CLASS_NAME" value="endtoend.addnewuser.AddNewUserTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AddNewUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Orangehrm" />
       <extension name="coverage">
@@ -79,24 +106,6 @@
       <option name="PACKAGE_NAME" value="addnewuser" />
       <option name="MAIN_CLASS_NAME" value="addnewuser.AddNewUserTest" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddNewUserTest.addNewUser" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Orangehrm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="addnewuser.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="addnewuser" />
-      <option name="MAIN_CLASS_NAME" value="addnewuser.AddNewUserTest" />
-      <option name="METHOD_NAME" value="addNewUser" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -121,7 +130,7 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="loginviacookise" />
+      <option name="PACKAGE_NAME" value="loginviacookies" />
       <option name="MAIN_CLASS_NAME" value="loginviacookies.LogInWithCookiesTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
@@ -130,16 +139,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginFlowNegativeTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginFlowPositiveTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Orangehrm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="loginflow.negative.*" />
+          <option name="PATTERN" value="loginflow.positive.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="loginflow.negative" />
-      <option name="MAIN_CLASS_NAME" value="loginflow.negative.LoginFlowNegativeTest" />
+      <option name="PACKAGE_NAME" value="loginflow.positive" />
+      <option name="MAIN_CLASS_NAME" value="loginflow.positive.LoginFlowPositiveTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -149,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AddNewUserTest" />
         <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml" />
-        <item itemvalue="TestNG.LoginFlowNegativeTest" />
         <item itemvalue="TestNG.LogInWithCookiesTest" />
-        <item itemvalue="TestNG.AddNewUserTest.addNewUser" />
+        <item itemvalue="TestNG.LoginFlowPositiveTest" />
+        <item itemvalue="TestNG.AddNewUserTest (1)" />
+        <item itemvalue="TestNG.AddNewUserTest" />
       </list>
     </recent_temporary>
   </component>

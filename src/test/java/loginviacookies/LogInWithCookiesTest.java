@@ -14,9 +14,9 @@ public class LogInWithCookiesTest extends BaseTest {
     @Test
     @Owner("spaulovich")
     @Step("Login to the app by setting the appropriate cookies.")
-    public void logInWithCookies() throws IOException {
+    public void logInWithCookiesTest() throws IOException {
         loginPage.logInWithCookies();
-        dashboardPage.checkPageUrlAdress()
+        dashboardPage.checkDashboardPageUrlAdress()
                      .checkPageTitle()
                      .checkUserDropdown();
         takeScreenshot();

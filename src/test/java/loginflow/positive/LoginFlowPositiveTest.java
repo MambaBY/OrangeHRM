@@ -2,12 +2,15 @@ package loginflow.positive;
 
 import basetest.BaseTest;
 import com.codeborne.selenide.testng.ScreenShooter;
+import common.Cookie;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Step;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+
 
 
 @Listeners({ ScreenShooter.class})
@@ -21,9 +24,14 @@ public class LoginFlowPositiveTest extends BaseTest {
         loginPage.enterUserLogin()
                 .enterUserPassword()
                 .clickLoginButton();
-        dashboardPage.checkPageUrlAdress()
+        dashboardPage.checkDashboardPageUrlAdress()
                 .checkPageTitle()
                 .checkUserDropdown();
+
         takeScreenshot();
+    }
+    @AfterMethod
+    public void getCookie(){
+        Cookie.getAuthorizationCookieValue();
     }
 }
