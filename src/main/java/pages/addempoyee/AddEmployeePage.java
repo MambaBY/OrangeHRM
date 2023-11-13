@@ -1,15 +1,15 @@
 package pages.addempoyee;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.WebDriverRunner;
+import org.openqa.selenium.Alert;
 import pages.basepage.BasePage;
-import pages.dashboard.DashboardPage;
 
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.url;
+import static common.GenerateRandomUserName.generateRandomName;
 import static constants.Constants.Urls.ADD_EMPLOYEE_PAGE;
-import static constants.Constants.Urls.DASHBOARD_PAGE;
 
 public class AddEmployeePage extends BasePage {
     public final SelenideElement firstNameInput = $x("//input[@name='firstName']");
@@ -19,6 +19,9 @@ public class AddEmployeePage extends BasePage {
             $x("(//div[@class='oxd-form-row'])[2]//input[@data-v-1f99f73c]");
     public final SelenideElement passwordInput = $x("(//input[@type = 'password'])[1]");
     public final SelenideElement confirmPasswordInput = $x("(//input[@type = 'password'])[2]");
+    public final SelenideElement saveButton = $x("//button[@type='submit']");
+
+
 
     public AddEmployeePage checkAddEmployeePageUrlAdress(){
         webdriver().shouldHave(url(ADD_EMPLOYEE_PAGE));
@@ -26,12 +29,12 @@ public class AddEmployeePage extends BasePage {
     }
 
     public AddEmployeePage fillInFirstName () {
-        firstNameInput.setValue("John"); //TBD: value is set via a parameter
+        firstNameInput.setValue(generateRandomName(5));
         return this;
     }
 
     public AddEmployeePage fillInLastName() {
-      lastNameInput.setValue("Connor"); //TBD: value is set via a parameter
+      lastNameInput.setValue(generateRandomName(8));
         return this;
     }
 
@@ -41,17 +44,23 @@ public class AddEmployeePage extends BasePage {
     }
 
     public AddEmployeePage fillInUsername() {
-        usernameInput.setValue("jconnor"); //TBD: value is set via a parameter
+        usernameInput.setValue(generateRandomName(8));
         return this;
     }
 
-    public AddEmployeePage fillInPassword() {
-        passwordInput.setValue("Admin!741"); //TBD: value is set via a parameter
+    public AddEmployeePage fillInPassword(String password) {
+        passwordInput.setValue(password);
         return this;
     }
 
-    public AddEmployeePage fillInPasswordConfirmation() {
-        confirmPasswordInput.setValue("Admin!741"); //TBD: value is set via a parameter
+    public AddEmployeePage fillInPasswordConfirmation(String password) {
+        confirmPasswordInput.setValue(password);
         return this;
     }
+
+    public AddEmployeePage clickOnSaveButton() {
+        saveButton.click();
+        return this;
+    }
+
 }

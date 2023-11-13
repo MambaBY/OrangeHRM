@@ -5,6 +5,7 @@ import com.codeborne.selenide.testng.ScreenShooter;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Step;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -16,7 +17,8 @@ public class AddNewUserTest extends BaseTest {
     @Test
     @Owner("spaulovich")
     @Step("Add a new user to the system. End-to-end test")
-    public void addNewUser() throws IOException {
+    @Parameters({"password"})
+    public void addNewUser(String password) throws IOException {
         loginPage.logInWithCookies();
         basePage.clickLeftSideMenuButton(pimMenu);
         pimPage.checkIfAddButtonVisible()
@@ -26,8 +28,11 @@ public class AddNewUserTest extends BaseTest {
                         .fillInLastName()
                         .clickLoginDetailsToggle()
                         .fillInUsername()
-                        .fillInPassword()
-                        .fillInPasswordConfirmation();
+                        .fillInPassword(password)
+                        .fillInPasswordConfirmation(password)
+                        .clickOnSaveButton();
+
+
         takeScreenshot();
     }
 }

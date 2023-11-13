@@ -18,6 +18,7 @@
             <class name="loginviacookies.LogInWithCookiesTest"/>
         </classes>
     </test>
+
 </suite>
 
 

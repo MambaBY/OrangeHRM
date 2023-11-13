@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="EndToEndTests">
+    <test name="Login positive test">
+        <classes>
+            <class name="loginflow.positive.LoginFlowPositiveTest"/>
+        </classes>
+    </test>
+    <parameter name="password" value="Pswrd478!@"/>
+    <test name="Add a new user">
+        <classes>
+            <class name="endtoend.addnewuser.AddNewUserTest"/>
+        </classes>
+    </test>
+</suite>
+
+
