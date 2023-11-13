@@ -1,8 +1,7 @@
 package pages.addempoyee;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.WebDriverRunner;
-import org.openqa.selenium.Alert;
 import pages.basepage.BasePage;
 
 import static com.codeborne.selenide.Selenide.$x;
@@ -20,9 +19,11 @@ public class AddEmployeePage extends BasePage {
     public final SelenideElement passwordInput = $x("(//input[@type = 'password'])[1]");
     public final SelenideElement confirmPasswordInput = $x("(//input[@type = 'password'])[2]");
     public final SelenideElement saveButton = $x("//button[@type='submit']");
+    public final SelenideElement successConfirmationPopUp = $x("//div[@id='oxd-toaster_1']");
 
-
-
+    /*
+     * Method is verifying that page URL is correct
+     */
     public AddEmployeePage checkAddEmployeePageUrlAdress(){
         webdriver().shouldHave(url(ADD_EMPLOYEE_PAGE));
         return this;
@@ -60,6 +61,15 @@ public class AddEmployeePage extends BasePage {
 
     public AddEmployeePage clickOnSaveButton() {
         saveButton.click();
+        return this;
+    }
+
+    /*
+     * Method is verifying that confirmation popup appears after a new user creation
+     */
+    public AddEmployeePage checkIfSuccessConfirmationPopUpAppears() {
+        successConfirmationPopUp.shouldBe(Condition.visible);
+        successConfirmationPopUp.shouldHave(Condition.text("Success\n" + "Successfully Saved"));
         return this;
     }
 

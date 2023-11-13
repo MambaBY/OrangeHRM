@@ -30,9 +30,8 @@ public class AddNewUserTest extends BaseTest {
                         .fillInUsername()
                         .fillInPassword(password)
                         .fillInPasswordConfirmation(password)
-                        .clickOnSaveButton();
-
-
+                        .clickOnSaveButton()
+                        .checkIfSuccessConfirmationPopUpAppears();
         takeScreenshot();
     }
 }
