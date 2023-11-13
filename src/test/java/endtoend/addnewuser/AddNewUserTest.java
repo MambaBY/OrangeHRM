@@ -11,12 +11,13 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 import static common.LeftMenuButtons.pimMenu;
+import static pages.addempoyee.AddEmployeePage.*;
 
 @Listeners({ ScreenShooter.class})
 public class AddNewUserTest extends BaseTest {
     @Test
     @Owner("spaulovich")
-    @Step("Add a new user to the system. End-to-end test")
+    @Step("Add a new user to the system.")
     @Parameters({"password"})
     public void addNewUser(String password) throws IOException {
         loginPage.logInWithCookies();
@@ -26,12 +27,26 @@ public class AddNewUserTest extends BaseTest {
         addEmployeePage.checkAddEmployeePageUrlAdress()
                         .fillInFirstName()
                         .fillInLastName()
+                        .fillInEmployeeID()
                         .clickLoginDetailsToggle()
                         .fillInUsername()
                         .fillInPassword(password)
                         .fillInPasswordConfirmation(password)
                         .clickOnSaveButton()
                         .checkIfSuccessConfirmationPopUpAppears();
-        takeScreenshot();
+                        takeScreenshot();
+    }
+
+    @Test
+    @Owner("spaulovich")
+    @Step("Verify that a new user is available in the list of users")
+    public void checkUserInTheList() throws IOException {
+        basePage.clickLeftSideMenuButton(pimMenu);
+        pimPage.inputUserName(userFirstName,userLastName)
+               .inputUserID(userID)
+               .clickOnSearchButton()
+               .checkSearchResult()
+               .checkFoundUsersData(userID, userFirstName,userLastName);
+                takeScreenshot();
     }
 }
