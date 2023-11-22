@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="EndToEndTests">
+    <test name="Login positive test">
+        <classes>
+            <class name="loginflow.positive.LoginFlowPositiveTest"/>
+        </classes>
+    </test>
+    <test name="Update Personal Details">
+        <classes>
+            <class name="endtoend.updatemyinfo.UpdateMyInfoTest"/>
+        </classes>
+    </test>
+</suite>
+
+

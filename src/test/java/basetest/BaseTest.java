@@ -13,6 +13,7 @@ import pages.addempoyee.AddEmployeePage;
 import pages.basepage.BasePage;
 import pages.dashboard.DashboardPage;
 import pages.loginpage.OrangeHrmLoginPage;
+import pages.myinfo.MyInfoPage;
 import pages.pim.PimPage;
 
 import java.io.File;
@@ -29,6 +30,8 @@ public class BaseTest {
     public DashboardPage dashboardPage = new DashboardPage();
     public PimPage pimPage = new PimPage();
     public AddEmployeePage addEmployeePage = new AddEmployeePage();
+    public MyInfoPage myInfoPage = new MyInfoPage();
+
 
 
 

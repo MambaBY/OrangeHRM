@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5db264f4-b8e5-4964-9d6a-a000f2a8d702" name="Changes" comment="Deleted unused xpath">
+      <change afterPath="$PROJECT_DIR$/UpdateMyInfoTest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/myinfo/MyInfoPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/endtoend/updatemyinfo/UpdateMyInfoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/common/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/common/GenerateRandomUserName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/GenerateRandomUserNameAndUserID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/addempoyee/AddEmployeePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/addempoyee/AddEmployeePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/pim/PimPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/pim/PimPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/endtoend/addnewuser/AddNewUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/endtoend/addnewuser/AddNewUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/LeftMenuButtons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/LeftMenuButtons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +76,7 @@
       <recent name="C:\Users\jinx_\Desktop\Orangehrm\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewUserTest.xml">
+  <component name="RunManager" selected="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/UpdateMyInfoTest.xml">
     <configuration name="GenerateRandomUserNameAndUserID" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="common.GenerateRandomUserNameAndUserID" />
       <module name="Orangehrm" />
@@ -117,6 +117,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/UpdateMyInfoTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Orangehrm" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/UpdateMyInfoTest.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Orangehrm" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/LoginTest.xml" />
@@ -127,30 +137,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LogInWithCookiesTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Orangehrm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="loginviacookies.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="loginviacookies" />
-      <option name="MAIN_CLASS_NAME" value="loginviacookies.LogInWithCookiesTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/UpdateMyInfoTest.xml" />
         <item itemvalue="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewUserTest.xml" />
         <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml" />
         <item itemvalue="Application.GenerateRandomUserNameAndUserID" />
         <item itemvalue="TestNG.AddNewUserTest (1)" />
-        <item itemvalue="TestNG.LogInWithCookiesTest" />
       </list>
     </recent_temporary>
   </component>
