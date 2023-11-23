@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5db264f4-b8e5-4964-9d6a-a000f2a8d702" name="Changes" comment="Deleted unused xpath">
-      <change afterPath="$PROJECT_DIR$/UpdateMyInfoTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/myinfo/MyInfoPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/endtoend/updatemyinfo/UpdateMyInfoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/common/LeftMenuButtons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/LeftMenuButtons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/myinfo/MyInfoPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/myinfo/MyInfoPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +73,7 @@
       <recent name="C:\Users\jinx_\Desktop\Orangehrm\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/UpdateMyInfoTest.xml">
+  <component name="RunManager" selected="TestNG.C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml">
     <configuration name="GenerateRandomUserNameAndUserID" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="common.GenerateRandomUserNameAndUserID" />
       <module name="Orangehrm" />
@@ -139,9 +136,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/UpdateMyInfoTest.xml" />
-        <item itemvalue="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewUserTest.xml" />
         <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml" />
+        <item itemvalue="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewUserTest.xml" />
+        <item itemvalue="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/UpdateMyInfoTest.xml" />
         <item itemvalue="Application.GenerateRandomUserNameAndUserID" />
         <item itemvalue="TestNG.AddNewUserTest (1)" />
       </list>
