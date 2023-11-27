@@ -16,7 +16,11 @@ public class UpdateMyInfoTest extends BaseTest {
     public void updateMyInfo() throws IOException {
         loginPage.logInWithCookies();
         basePage.clickLeftSideMenuButton(myInfo);
-        myInfoPage.checkTheTitle();
+        myInfoPage.checkTheTitle()
+                  .changeUserFirstName()
+                  .changeUserLastName()
+                  .changeUserNickName();
+
 
         takeScreenshot();
     }
