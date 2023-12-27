@@ -1,25 +1,36 @@
 package pages.myinfo;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import pages.basepage.BasePage;
 
-import static com.codeborne.selenide.Selenide.$x;
-import static com.codeborne.selenide.Selenide.sleep;
+import java.security.SecureRandom;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+
+import static com.codeborne.selenide.Selenide.*;
+import static common.GenerateRandomUserNameAndUserID.generateRandomDriversLicenseNumber;
 
 public class MyInfoPage extends BasePage {
     public static final SelenideElement title = $x("//h6[text() = 'Personal Details']");
     public static final SelenideElement firstName = $x("//input[@name='firstName']");
     public static final SelenideElement lastName = $x("//input[@name='lastName']");
     public static final SelenideElement userNickName =
-            $x("(//input[@class = 'oxd-input oxd-input--active'])[2]");
+            $x("//label[text() = 'Nickname']/following::input[1]");
     public static final SelenideElement driverLicenseNumber =
-            $x("(//input[@class = 'oxd-input oxd-input--active'])[5]");
+            $x("//label[text() = \"Driver's License Number\"]/following::input[1]");
     public static final SelenideElement driverLicenseExpiryDate =
-            $x("(//input[@class = 'oxd-input oxd-input--active'])[6]");
+            $x("//label[text() = 'License Expiry Date']/following::input[1]");
     public static final SelenideElement nationalitySelector =
-            $x("(//div[@class='oxd-select-text-input'])[1]");
+            $x("//label[text()='Nationality']/following::div[1]");
+    public static final SelenideElement nationalityOptions =
+            $x("//div[@role='listbox']");
     public static final SelenideElement maritalStatus =$x("(//div[@class='oxd-select-text-input'])[2]");
 
     public static final SelenideElement dateOfBirth =
@@ -41,16 +52,57 @@ public class MyInfoPage extends BasePage {
     }
     public MyInfoPage changeUserLastName() {
         lastName.sendKeys(Keys.CONTROL + "A");
-        lastName.sendKeys(Keys.DELETE);
+        lastName.sendKeys(Keys.BACK_SPACE);
         lastName.setValue("Smith");
         return this;
     }
 
     public MyInfoPage changeUserNickName() {
         userNickName.sendKeys(Keys.CONTROL + "A");
-        userNickName.sendKeys(Keys.DELETE);
+        userNickName.sendKeys(Keys.BACK_SPACE);
         userNickName.setValue("asmith");
         return this;
     }
 
+    public MyInfoPage changeDriverLicenseNumber() {
+        driverLicenseNumber.sendKeys(Keys.CONTROL + "A");
+        driverLicenseNumber.sendKeys(Keys.BACK_SPACE);
+        driverLicenseNumber.setValue(generateRandomDriversLicenseNumber(8));
+        return this;
+    }
+
+    public MyInfoPage changeDriverLicenseExpiryDate() throws Exception {
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.YEAR, 2);
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String toDate = dateFormat.format(cal.getTime());
+        driverLicenseExpiryDate.sendKeys(Keys.CONTROL + "A");
+        driverLicenseExpiryDate.sendKeys(Keys.BACK_SPACE);
+        driverLicenseExpiryDate.setValue(toDate);
+        return this;
+    }
+
+    public MyInfoPage changeNationality() {
+        nationalitySelector.click();
+        nationalityOptions.scrollTo();
+        ElementsCollection listOfElements = $$(By.xpath("//div[@role='listbox']/div"));
+        List<String> options = new ArrayList();
+        for (SelenideElement element : listOfElements) {
+            options.add(element.getText());
+        }
+
+        SecureRandom random = new SecureRandom();
+
+        String newNationality = options.get(random.nextInt(options.size()));
+
+        while (newNationality == nationalitySelector.getText()){
+            newNationality = options.get(random.nextInt(options.size()));
+        }
+        $x("//div[@role='listbox']/div[@role='option']/span[(text() = '" + newNationality + "')]").click();
+        return this;
+    }
+
+// TODO: 12/27/2023
+    //Add step for checking that a new nationality differs from default
+    // split changeNationality in to two methods
 }

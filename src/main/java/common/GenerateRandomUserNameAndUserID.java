@@ -17,4 +17,10 @@ public class GenerateRandomUserNameAndUserID {
         boolean useNumbers = true;
         return RandomStringUtils.random(lenght, useLetters, useNumbers);
     }
+
+    public static String generateRandomDriversLicenseNumber(int lenght) {
+        boolean useLetters = true;
+        boolean useNumbers = true;
+        return RandomStringUtils.random(lenght, useLetters, useNumbers);
+    }
 }
