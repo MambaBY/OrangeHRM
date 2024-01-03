@@ -20,7 +20,8 @@ public class UpdateMyInfoTest extends BaseTest {
                   .changeUserNickName()
                   .changeDriverLicenseNumber()
                   .changeDriverLicenseExpiryDate()
-                  .changeNationality();
+                  .changeNationality()
+                  .changeMaritalStatus();
 
 
         takeScreenshot();

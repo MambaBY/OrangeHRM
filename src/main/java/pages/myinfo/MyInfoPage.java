@@ -3,7 +3,6 @@ package pages.myinfo;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import pages.basepage.BasePage;
 
@@ -31,10 +30,9 @@ public class MyInfoPage extends BasePage {
             $x("//label[text()='Nationality']/following::div[1]");
     public static final SelenideElement nationalityOptions =
             $x("//div[@role='listbox']");
+    public static final ElementsCollection listOfElementsInDorpDown = $$x("//div[@role='listbox']/div");
     public static final SelenideElement maritalStatus =$x("(//div[@class='oxd-select-text-input'])[2]");
 
-    public static final SelenideElement dateOfBirth =
-            $x("(//input[@class = 'oxd-input oxd-input--active'])[9]");
     public static final SelenideElement isSmoker = $x("(//input[@type= 'checkbox'])[1]");
     public static final SelenideElement savePersonalDetailsButton = $x("(//button[@type='submit'])[1]");
 
@@ -82,27 +80,40 @@ public class MyInfoPage extends BasePage {
         return this;
     }
 
+    public String generateRandomOptionInList(ElementsCollection collection){
+        List<String> options = new ArrayList();
+        for (SelenideElement element : collection) {
+            options.add(element.getText());
+        }
+        SecureRandom random = new SecureRandom();
+        String newOption = options.get(random.nextInt(options.size()));
+        return newOption;
+    }
+
     public MyInfoPage changeNationality() {
         nationalitySelector.click();
         nationalityOptions.scrollTo();
-        ElementsCollection listOfElements = $$(By.xpath("//div[@role='listbox']/div"));
-        List<String> options = new ArrayList();
-        for (SelenideElement element : listOfElements) {
-            options.add(element.getText());
-        }
-
-        SecureRandom random = new SecureRandom();
-
-        String newNationality = options.get(random.nextInt(options.size()));
+        String newNationality = generateRandomOptionInList(listOfElementsInDorpDown);
 
         while (newNationality == nationalitySelector.getText()){
-            newNationality = options.get(random.nextInt(options.size()));
+            newNationality = generateRandomOptionInList(listOfElementsInDorpDown);
         }
         $x("//div[@role='listbox']/div[@role='option']/span[(text() = '" + newNationality + "')]").click();
+        nationalitySelector.shouldBe(Condition.exactText(newNationality));
         return this;
     }
 
-// TODO: 12/27/2023
-    //Add step for checking that a new nationality differs from default
-    // split changeNationality in to two methods
+    public MyInfoPage changeMaritalStatus() {
+        maritalStatus.click();
+        String newNMaritalStatus = generateRandomOptionInList(listOfElementsInDorpDown);
+
+        while (newNMaritalStatus == nationalitySelector.getText()){
+            newNMaritalStatus = generateRandomOptionInList(listOfElementsInDorpDown);
+        }
+        $x("//div[@role='listbox']/div[@role='option']/span[(text() = '" + newNMaritalStatus + "')]").click();
+        maritalStatus.shouldBe(Condition.exactText(newNMaritalStatus));
+        return this;
+    }
+
+
 }
