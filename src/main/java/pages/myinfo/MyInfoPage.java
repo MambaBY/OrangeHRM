@@ -28,12 +28,10 @@ public class MyInfoPage extends BasePage {
             $x("//label[text() = 'License Expiry Date']/following::input[1]");
     public static final SelenideElement nationalitySelector =
             $x("//label[text()='Nationality']/following::div[1]");
-    public static final SelenideElement nationalityOptions =
-            $x("//div[@role='listbox']");
     public static final ElementsCollection listOfElementsInDorpDown = $$x("//div[@role='listbox']/div");
-    public static final SelenideElement maritalStatus =$x("(//div[@class='oxd-select-text-input'])[2]");
-
-    public static final SelenideElement isSmoker = $x("(//input[@type= 'checkbox'])[1]");
+    public static final SelenideElement maritalStatus = $x("//label[text()='Marital Status']/following::div[1]");
+    public static final SelenideElement isSmoker = $x("//label[text()= 'Smoker']/following::div[1]");
+            //$x("(//input[@type= 'checkbox'])[1]");
     public static final SelenideElement savePersonalDetailsButton = $x("(//button[@type='submit'])[1]");
 
     public MyInfoPage checkTheTitle() {
@@ -77,6 +75,7 @@ public class MyInfoPage extends BasePage {
         driverLicenseExpiryDate.sendKeys(Keys.CONTROL + "A");
         driverLicenseExpiryDate.sendKeys(Keys.BACK_SPACE);
         driverLicenseExpiryDate.setValue(toDate);
+        driverLicenseExpiryDate.scrollIntoView(true);
         return this;
     }
 
@@ -92,10 +91,8 @@ public class MyInfoPage extends BasePage {
 
     public MyInfoPage changeNationality() {
         nationalitySelector.click();
-        nationalityOptions.scrollTo();
         String newNationality = generateRandomOptionInList(listOfElementsInDorpDown);
-
-        while (newNationality == nationalitySelector.getText()){
+        while (newNationality == nationalitySelector.getText() || newNationality == "-- Select --"){
             newNationality = generateRandomOptionInList(listOfElementsInDorpDown);
         }
         $x("//div[@role='listbox']/div[@role='option']/span[(text() = '" + newNationality + "')]").click();
@@ -105,13 +102,19 @@ public class MyInfoPage extends BasePage {
 
     public MyInfoPage changeMaritalStatus() {
         maritalStatus.click();
-        String newNMaritalStatus = generateRandomOptionInList(listOfElementsInDorpDown);
-
-        while (newNMaritalStatus == nationalitySelector.getText()){
-            newNMaritalStatus = generateRandomOptionInList(listOfElementsInDorpDown);
+        String newMaritalStatus = generateRandomOptionInList(listOfElementsInDorpDown);
+        while (newMaritalStatus == nationalitySelector.getText() || newMaritalStatus == "-- Select --"){
+            newMaritalStatus = generateRandomOptionInList(listOfElementsInDorpDown);
         }
-        $x("//div[@role='listbox']/div[@role='option']/span[(text() = '" + newNMaritalStatus + "')]").click();
-        maritalStatus.shouldBe(Condition.exactText(newNMaritalStatus));
+        $x("//div[@role='listbox']/div[@role='option']/span[(text() = '" + newMaritalStatus + "')]").click();
+        maritalStatus.shouldBe(Condition.exactText(newMaritalStatus));
+        return this;
+    }
+
+    public MyInfoPage changeSmokerStatus (){
+        System.out.println(isSmoker.isSelected());
+        isSmoker.click();
+        System.out.println(isSmoker.isSelected());
         return this;
     }
 
