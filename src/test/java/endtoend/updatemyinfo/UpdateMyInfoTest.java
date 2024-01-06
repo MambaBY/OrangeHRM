@@ -22,10 +22,9 @@ public class UpdateMyInfoTest extends BaseTest {
                   .changeDriverLicenseExpiryDate()
                   .changeNationality()
                   .changeMaritalStatus()
-                  .changeSmokerStatus();
-
-
-
+                  .changeSmokerStatus()
+                  .saveMyInfoChanges()
+                  .checkIfSuccessConfirmationPopUpAppears();
         takeScreenshot();
     }
 }

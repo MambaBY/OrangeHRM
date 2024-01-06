@@ -26,13 +26,14 @@ public class MyInfoPage extends BasePage {
             $x("//label[text() = \"Driver's License Number\"]/following::input[1]");
     public static final SelenideElement driverLicenseExpiryDate =
             $x("//label[text() = 'License Expiry Date']/following::input[1]");
-    public static final SelenideElement nationalitySelector =
+    public static final SelenideElement listOfNationalities =
             $x("//label[text()='Nationality']/following::div[1]");
     public static final ElementsCollection listOfElementsInDorpDown = $$x("//div[@role='listbox']/div");
     public static final SelenideElement maritalStatus = $x("//label[text()='Marital Status']/following::div[1]");
-    public static final SelenideElement isSmoker = $x("//label[text()= 'Smoker']/following::div[1]");
-            //$x("(//input[@type= 'checkbox'])[1]");
+    public static final SelenideElement isSmokerCheckbox = $x("//label[text()= 'Yes']");
+    public static final SelenideElement smokerCheckMark = $x("(//input[@type= 'checkbox'])[1]");
     public static final SelenideElement savePersonalDetailsButton = $x("(//button[@type='submit'])[1]");
+    public final SelenideElement successConfirmationPopUp = $x("//div[@id='oxd-toaster_1']");
 
     public MyInfoPage checkTheTitle() {
         title.shouldBe(Condition.visible);
@@ -90,33 +91,54 @@ public class MyInfoPage extends BasePage {
     }
 
     public MyInfoPage changeNationality() {
-        nationalitySelector.click();
+        String currentNationality = listOfNationalities.getText();
+        listOfNationalities.click();
         String newNationality = generateRandomOptionInList(listOfElementsInDorpDown);
-        while (newNationality == nationalitySelector.getText() || newNationality == "-- Select --"){
+        while (newNationality.equals(currentNationality) || newNationality.equals("-- Select --")){
             newNationality = generateRandomOptionInList(listOfElementsInDorpDown);
         }
         $x("//div[@role='listbox']/div[@role='option']/span[(text() = '" + newNationality + "')]").click();
-        nationalitySelector.shouldBe(Condition.exactText(newNationality));
+        listOfNationalities.shouldBe(Condition.exactText(newNationality));
         return this;
     }
 
     public MyInfoPage changeMaritalStatus() {
+        String currentMaritalStatus = maritalStatus.getText();
         maritalStatus.click();
         String newMaritalStatus = generateRandomOptionInList(listOfElementsInDorpDown);
-        while (newMaritalStatus == nationalitySelector.getText() || newMaritalStatus == "-- Select --"){
+        while (newMaritalStatus.equals(currentMaritalStatus) || newMaritalStatus.equals("-- Select --")){
             newMaritalStatus = generateRandomOptionInList(listOfElementsInDorpDown);
         }
-        $x("//div[@role='listbox']/div[@role='option']/span[(text() = '" + newMaritalStatus + "')]").click();
+        $x("//div[@role='listbox']/div[@role='option']/span[(text() = '"+ newMaritalStatus +"')]").click();
         maritalStatus.shouldBe(Condition.exactText(newMaritalStatus));
         return this;
     }
 
     public MyInfoPage changeSmokerStatus (){
-        System.out.println(isSmoker.isSelected());
-        isSmoker.click();
-        System.out.println(isSmoker.isSelected());
+        boolean isSmokerStatus = smokerCheckMark.isSelected();
+        isSmokerCheckbox.click();
+        if (!isSmokerStatus) {
+            smokerCheckMark.shouldBe(Condition.checked);
+        } else {
+            smokerCheckMark.shouldNotBe(Condition.checked);
+        }
         return this;
     }
 
+    public MyInfoPage saveMyInfoChanges (){
+        savePersonalDetailsButton.scrollIntoView(true);
+        savePersonalDetailsButton.submit();
+        return this;
+    }
+
+    public MyInfoPage checkIfSuccessConfirmationPopUpAppears() {
+        successConfirmationPopUp.shouldBe(Condition.visible);
+        successConfirmationPopUp.shouldHave(Condition.text("Success\n" + "Successfully Updated"));
+        return this;
+    }
+
+    // TODO: 06.01.2024
+    //Add comments
+    // Make corrections in webelements
 
 }
