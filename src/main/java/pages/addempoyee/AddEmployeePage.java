@@ -8,8 +8,8 @@ import pages.basepage.BasePage;
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.url;
-import static common.GenerateRandomUserNameAndUserID.generateRandomName;
-import static common.GenerateRandomUserNameAndUserID.generateRandomUserID;
+import static common.GenerateRandomValues.generateRandomName;
+import static common.GenerateRandomValues.generateRandomUserID;
 import static constants.Constants.Urls.ADD_EMPLOYEE_PAGE;
 
 public class AddEmployeePage extends BasePage {

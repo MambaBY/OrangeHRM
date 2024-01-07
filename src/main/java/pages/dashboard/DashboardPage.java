@@ -10,8 +10,8 @@ import static com.codeborne.selenide.WebDriverConditions.url;
 import static constants.Constants.Urls.DASHBOARD_PAGE;
 
 public class DashboardPage {
-    public final SelenideElement pageTitle = $x("//span[@class='oxd-topbar-header-breadcrumb']");
-    public final SelenideElement userDropdown = $x("//li[@class='oxd-userdropdown']");
+    private final SelenideElement pageTitle = $x("//span[@class='oxd-topbar-header-breadcrumb']");
+    private final SelenideElement userDropdown = $x("//li[@class='oxd-userdropdown']");
 
 
     /*

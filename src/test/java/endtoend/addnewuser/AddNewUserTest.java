@@ -20,7 +20,10 @@ public class AddNewUserTest extends BaseTest {
     @Step("Add a new user to the system.")
     @Parameters({"password"})
     public void addNewUser(String password) throws IOException {
-        loginPage.logInWithCookies();
+        basePage.openLoginPage();
+        loginPage.enterUserLogin()
+                .enterUserPassword()
+                .clickLoginButton();
         basePage.clickLeftSideMenuButton(pimMenu);
         pimPage.checkIfAddButtonVisible()
                .clickAddButton();

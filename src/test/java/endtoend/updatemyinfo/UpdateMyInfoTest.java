@@ -12,7 +12,10 @@ public class UpdateMyInfoTest extends BaseTest {
     @Owner("spaulovich")
     @Step("Update Personal Details on the My info page")
     public void updateMyInfo() throws Exception {
-        loginPage.logInWithCookies();
+        basePage.openLoginPage();
+        loginPage.enterUserLogin()
+                .enterUserPassword()
+                .clickLoginButton();
         basePage.clickLeftSideMenuButton(myInfo);
         myInfoPage.checkTheTitle()
                   .changeUserFirstName()

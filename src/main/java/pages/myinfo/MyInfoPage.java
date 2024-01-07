@@ -14,26 +14,30 @@ import java.util.Calendar;
 import java.util.List;
 
 import static com.codeborne.selenide.Selenide.*;
-import static common.GenerateRandomUserNameAndUserID.generateRandomDriversLicenseNumber;
+import static common.GenerateRandomValues.generateRandomDriversLicenseNumber;
 
 public class MyInfoPage extends BasePage {
-    public static final SelenideElement title = $x("//h6[text() = 'Personal Details']");
-    public static final SelenideElement firstName = $x("//input[@name='firstName']");
-    public static final SelenideElement lastName = $x("//input[@name='lastName']");
-    public static final SelenideElement userNickName =
+    private final SelenideElement title = $x("//h6[text() = 'Personal Details']");
+    private final SelenideElement firstName = $x("//input[@name='firstName']");
+    private final SelenideElement lastName = $x("//input[@name='lastName']");
+    private final SelenideElement userNickName =
             $x("//label[text() = 'Nickname']/following::input[1]");
-    public static final SelenideElement driverLicenseNumber =
+    private final SelenideElement driverLicenseNumber =
             $x("//label[text() = \"Driver's License Number\"]/following::input[1]");
-    public static final SelenideElement driverLicenseExpiryDate =
+    private final SelenideElement driverLicenseExpiryDate =
             $x("//label[text() = 'License Expiry Date']/following::input[1]");
-    public static final SelenideElement listOfNationalities =
+    private final SelenideElement listOfNationalities =
             $x("//label[text()='Nationality']/following::div[1]");
-    public static final ElementsCollection listOfElementsInDorpDown = $$x("//div[@role='listbox']/div");
-    public static final SelenideElement maritalStatus = $x("//label[text()='Marital Status']/following::div[1]");
-    public static final SelenideElement isSmokerCheckbox = $x("//label[text()= 'Yes']");
-    public static final SelenideElement smokerCheckMark = $x("(//input[@type= 'checkbox'])[1]");
-    public static final SelenideElement savePersonalDetailsButton = $x("(//button[@type='submit'])[1]");
-    public final SelenideElement successConfirmationPopUp = $x("//div[@id='oxd-toaster_1']");
+    private final ElementsCollection listOfElementsInDorpDown =
+            $$x("//div[@role='listbox']/div");
+    private final SelenideElement maritalStatus =
+            $x("//label[text()='Marital Status']/following::div[1]");
+    private final SelenideElement isSmokerCheckbox = $x("//label[text()= 'Yes']");
+    private final SelenideElement smokerCheckMark = $x("(//input[@type= 'checkbox'])[1]");
+    private final SelenideElement savePersonalDetailsButton =
+            $x("(//button[@type='submit'])[1]");
+    private final SelenideElement successConfirmationPopUp =
+            $x("//div[@id='oxd-toaster_1']");
 
     public MyInfoPage checkTheTitle() {
         title.shouldBe(Condition.visible);
@@ -80,6 +84,9 @@ public class MyInfoPage extends BasePage {
         return this;
     }
 
+    /*
+     * Method that is selecting random value in the dropdown on the MyInfo page
+     */
     public String generateRandomOptionInList(ElementsCollection collection){
         List<String> options = new ArrayList();
         for (SelenideElement element : collection) {
@@ -136,9 +143,5 @@ public class MyInfoPage extends BasePage {
         successConfirmationPopUp.shouldHave(Condition.text("Success\n" + "Successfully Updated"));
         return this;
     }
-
-    // TODO: 06.01.2024
-    //Add comments
-    // Make corrections in webelements
 
 }

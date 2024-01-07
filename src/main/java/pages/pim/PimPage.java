@@ -17,7 +17,7 @@ public class PimPage extends BasePage {
     private final SelenideElement recordsFoundCounter = $x("//div[@data-v-0dea79bd]/div");
     private final SelenideElement userSearchResultCard =
             $x(" //div[@class='oxd-table-card']");
-   private final SelenideElement userIdCulomnInSearchResultTable =
+    private final SelenideElement userIdCulomnInSearchResultTable =
             $x("//div[@class='oxd-table-card']//div[2]");
     private final SelenideElement userFirstNameCulomnInSearchResultTable =
             $x("//div[@class='oxd-table-card']//div[3]");
