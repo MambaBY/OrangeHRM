@@ -17,4 +17,11 @@ public class LeftMenuButtons {
      * 'My info' menu
      */
     public static final SelenideElement myInfo = $x("(//li[@class = 'oxd-main-menu-item-wrapper'])[6]");
+
+    /*
+     * 'Buzz' menu
+     */
+    public static final SelenideElement buzzMenu = $x(" (//li[@class = 'oxd-main-menu-item-wrapper'])[12]");
+
+
 }

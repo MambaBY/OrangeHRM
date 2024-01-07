@@ -11,6 +11,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.testng.annotations.*;
 import pages.addempoyee.AddEmployeePage;
 import pages.basepage.BasePage;
+import pages.buzzpage.BuzzNewsFeedPage;
 import pages.dashboard.DashboardPage;
 import pages.loginpage.OrangeHrmLoginPage;
 import pages.myinfo.MyInfoPage;
@@ -31,7 +32,7 @@ public class BaseTest {
     public PimPage pimPage = new PimPage();
     public AddEmployeePage addEmployeePage = new AddEmployeePage();
     public MyInfoPage myInfoPage = new MyInfoPage();
-
+    public BuzzNewsFeedPage buzzNewsfeedPage = new BuzzNewsFeedPage();
 
 
 
