@@ -2,7 +2,6 @@ package pages.buzzpage;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import pages.addempoyee.AddEmployeePage;
 import pages.basepage.BasePage;
 
 import static com.codeborne.selenide.Selenide.$x;
@@ -31,6 +30,7 @@ public class BuzzNewsFeedPage extends BasePage {
     }
 
     public BuzzNewsFeedPage checkIfNewPostAddwdtoFeed (String newPostText){
+        successConfirmationPopUp.shouldNotBe(Condition.visible);
         newAddedPost.shouldBe(Condition.visible);
         newAddedPost.shouldHave(Condition.exactText(newPostText));
         return this;

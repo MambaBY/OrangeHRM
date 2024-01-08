@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5db264f4-b8e5-4964-9d6a-a000f2a8d702" name="Changes" comment="Deleted unused xpath">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AddNewPostTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AddNewPostTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/buzzpage/BuzzNewsFeedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/buzzpage/BuzzNewsFeedPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/addbuzznewsfeed/AddNewPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/addbuzznewsfeed/AddNewPostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
