@@ -49,7 +49,7 @@ public class BaseTest {
     }
 
     /*
-    /* Method for saving screenshot in the Allure report
+    /* Method for saving screenshots in the Allure report
      */
     @Attachment(value = "Screenshot", type = "image/png", fileExtension = ".png")
     public static byte[] takeScreenshot() throws IOException {
