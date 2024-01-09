@@ -17,7 +17,7 @@ import static common.LeftMenuButtons.buzzMenu;
 public class AddNewPostTest extends BaseTest {
     @Test
     @Owner("spaulovich")
-    @Step("Add a new user to the system.")
+    @Step("Add a new post to the feed without an attachment.")
     @Parameters({"newPostText"})
     public void addNewPost (String newPostText) throws IOException {
         basePage.openLoginPage();
@@ -29,6 +29,18 @@ public class AddNewPostTest extends BaseTest {
                         .clickPostButton()
                         .checkIfSuccessConfirmationPopUpAppears()
                         .checkIfNewPostAddwdtoFeed(newPostText);
+
+        takeScreenshot();
+    }
+
+    @Test
+    @Owner("spaulovich")
+    @Step("Add a new post to the feed with a photo.")
+    @Parameters({"newPostText"})
+    public void addNewPostWithPhoto() throws IOException {
+        buzzNewsfeedPage.clickSharePhotoButton()
+                        .checkIfSharePhotoPopUpIsOpened()
+                        .uploadPhoto();
 
         takeScreenshot();
     }
