@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5db264f4-b8e5-4964-9d6a-a000f2a8d702" name="Changes" comment="Deleted unused xpath">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/Photo/image.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AddNewPostTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AddNewPostTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/buzzpage/BuzzNewsFeedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/buzzpage/BuzzNewsFeedPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/addbuzznewsfeed/AddNewPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/addbuzznewsfeed/AddNewPostTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -60,13 +62,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ToolWindowCoverage.ShowToolbar": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "last_directory_selection": "C:/Users/jinx_/Desktop/Orangehrm/src/test/java",
     "last_opened_file_path": "C:/Users/jinx_/Desktop/Orangehrm/src/test/resources/Photo",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
@@ -83,15 +86,37 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewPostTest.xml">
-    <configuration name="GenerateRandomValues" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="common.GenerateRandomValues" />
+    <configuration name="AddNewPostToFeedTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Orangehrm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="common.*" />
+          <option name="PATTERN" value="addbuzznewsfeed.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="addbuzznewsfeed" />
+      <option name="MAIN_CLASS_NAME" value="addbuzznewsfeed.AddNewPostToFeedTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddNewPostToFeedTest.addNewPostWithPhoto" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Orangehrm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="addbuzznewsfeed.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="addbuzznewsfeed" />
+      <option name="MAIN_CLASS_NAME" value="addbuzznewsfeed.AddNewPostToFeedTest" />
+      <option name="METHOD_NAME" value="addNewPostWithPhoto" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -126,23 +151,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Orangehrm" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/LoginTest.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewPostTest.xml" />
+        <item itemvalue="TestNG.AddNewPostToFeedTest" />
+        <item itemvalue="TestNG.AddNewPostToFeedTest.addNewPostWithPhoto" />
         <item itemvalue="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/UpdateMyInfoTest.xml" />
         <item itemvalue="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewUserTest.xml" />
-        <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml" />
-        <item itemvalue="Application.GenerateRandomValues" />
       </list>
     </recent_temporary>
   </component>
@@ -166,8 +181,24 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated testNG file" />
     <option name="LAST_COMMIT_MESSAGE" value="Updated testNG file" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Orangehrm$AddNewPostTest_addNewPostWithPhoto.ic" NAME="AddNewPostTest.addNewPostWithPhoto Coverage Results" MODIFIED="1705004996998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>addbuzznewsfeed.*</FILTER>
+    </SUITE>
   </component>
 </project>

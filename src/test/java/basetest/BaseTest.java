@@ -32,7 +32,7 @@ public class BaseTest {
     public PimPage pimPage = new PimPage();
     public AddEmployeePage addEmployeePage = new AddEmployeePage();
     public MyInfoPage myInfoPage = new MyInfoPage();
-    public BuzzNewsFeedPage buzzNewsfeedPage = new BuzzNewsFeedPage();
+    public BuzzNewsFeedPage buzzNewsFeedPage = new BuzzNewsFeedPage();
 
 
 
