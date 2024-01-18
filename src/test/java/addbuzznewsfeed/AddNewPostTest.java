@@ -29,21 +29,7 @@ public class AddNewPostTest extends BaseTest {
                 .checkIfSuccessConfirmationPopUpAppears();
         basePage.clickLeftSideMenuButton(buzzMenu);
         buzzNewsFeedPage.checkIfNewPostAddedtoFeed(newPostText);
-        takeScreenshot();
-    }
 
-    @Test
-    @Owner("spaulovich")
-    @Step("Add a new post with a photo to the feed.")
-    @Parameters({"newPostTextInPopUp"})
-    public void addNewPostWithPhoto(String newPostTextForThePopUp) throws IOException {
-        buzzNewsFeedPage.clickSharePhotoButton()
-                .checkIfSharePhotoPopUpIsOpened()
-                .typeNewPostInPopUpWindow(newPostTextForThePopUp)
-                .uploadPhoto()
-                .clickShareButton()
-                .checkIfSuccessConfirmationPopUpAppears()
-                .checkIfNewPostAddedtoFeed(newPostTextForThePopUp);
         takeScreenshot();
     }
 }

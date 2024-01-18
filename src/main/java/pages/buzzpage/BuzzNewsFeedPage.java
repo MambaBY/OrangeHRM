@@ -6,19 +6,21 @@ import pages.basepage.BasePage;
 
 import java.io.File;
 
+import static com.codeborne.selenide.Condition.attributeMatching;
+import static com.codeborne.selenide.Condition.disabled;
 import static com.codeborne.selenide.Selenide.$x;
-import static com.codeborne.selenide.Selenide.sleep;
 
 public class BuzzNewsFeedPage extends BasePage {
     private final SelenideElement textInput = $x("(//textarea[@class= 'oxd-buzz-post-input'])[1]");
     private final SelenideElement textInputInPopUpWindow =
             $x("(//textarea[@class= 'oxd-buzz-post-input'])[2]");
     private final SelenideElement postButton = $x("//button[@type= 'submit']");
-    private final SelenideElement shareButton = $x("//button[text()= ' Share ']");
+    private final SelenideElement shareButtonInPopUp = $x("//button[text()= ' Share ']");
     public final SelenideElement successConfirmationPopUp = $x("//div[@id='oxd-toaster_1']");
     public final SelenideElement newAddedPost = $x("(//div[@class= 'orangehrm-buzz-post-body'])[1]");
     public final SelenideElement sharePhotoButton = $x("//button[text()= ' Share Photos']");
-    public final SelenideElement sharePhotoPopUp = $x("//div[@role = 'document']");
+    public final SelenideElement sharePhotoPopUpTitle =$x("//p[text()= 'Share Photos']");
+    //public final SelenideElement sharePhotoPopUp = $x("//div[@role = 'document']");
     public final SelenideElement inputPhoto = $x("//input[@type= 'file']");
     public final SelenideElement uploadedPhotoInPopUp = $x("//div[@class ='orangehrm-photo-input']//img");
     public final SelenideElement loadingSpiner = $x("//*[@class = 'oxd-loading-spinner']");
@@ -42,9 +44,10 @@ public class BuzzNewsFeedPage extends BasePage {
         return this;
     }
 
-    public BuzzNewsFeedPage clickShareButton(){
-        shareButton.shouldBe(Condition.visible);
-        shareButton.submit();
+    public BuzzNewsFeedPage clickShareButtonInPopUp(){
+        shareButtonInPopUp.shouldBe(Condition.visible);
+        shareButtonInPopUp.shouldNotBe(disabled);
+        shareButtonInPopUp.submit();
         return this;
     }
 
@@ -55,21 +58,22 @@ public class BuzzNewsFeedPage extends BasePage {
     }
 
     public BuzzNewsFeedPage checkIfNewPostAddedtoFeed(String newPostText){
-        //successConfirmationPopUp.shouldNotBe(Condition.visible);
         loadingSpiner.shouldNotBe(Condition.visible);
         newAddedPost.shouldBe(Condition.visible);
         newAddedPost.shouldHave(Condition.exactText(newPostText));
         return this;
     }
 
-    public BuzzNewsFeedPage clickSharePhotoButton(){
+    public BuzzNewsFeedPage clickSharePhotoButton() throws InterruptedException {
+        Thread.sleep(3000);
+        loadingSpiner.shouldNotBe(Condition.visible);
         sharePhotoButton.shouldBe(Condition.visible);
         sharePhotoButton.click();
         return this;
     }
 
     public BuzzNewsFeedPage checkIfSharePhotoPopUpIsOpened(){
-        sharePhotoPopUp.shouldBe(Condition.visible);
+        sharePhotoPopUpTitle.shouldBe(Condition.visible);
         return this;
     }
 

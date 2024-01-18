@@ -3,9 +3,11 @@ package basetest;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Screenshots;
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.codeborne.selenide.testng.ScreenShooter;
 import com.google.common.io.Files;
+import common.Cookie;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.testng.annotations.*;
@@ -22,6 +24,7 @@ import java.io.IOException;
 
 import static common.Config.CLEAR_COOKIES_AND_STORAGE;
 import static common.Config.HOLD_BROWSER_CLOSED;
+import static common.Cookie.authorizationCookieName;
 
 @Listeners({ ScreenShooter.class})
 public class BaseTest {
@@ -56,6 +59,7 @@ public class BaseTest {
         File screenshot = Screenshots.takeScreenShotAsFile().getAbsoluteFile();
         return screenshot == null ? null : Files.toByteArray(screenshot);
     }
+
 
     @AfterTest
     public void clearCookieAndLocalStorage () {
