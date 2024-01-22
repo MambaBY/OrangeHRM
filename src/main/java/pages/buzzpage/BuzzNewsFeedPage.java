@@ -6,7 +6,6 @@ import pages.basepage.BasePage;
 
 import java.io.File;
 
-import static com.codeborne.selenide.Condition.attributeMatching;
 import static com.codeborne.selenide.Condition.disabled;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -18,20 +17,26 @@ public class BuzzNewsFeedPage extends BasePage {
     private final SelenideElement shareButtonInPopUp = $x("//button[text()= ' Share ']");
     public final SelenideElement successConfirmationPopUp = $x("//div[@id='oxd-toaster_1']");
     public final SelenideElement newAddedPost = $x("(//div[@class= 'orangehrm-buzz-post-body'])[1]");
+    public final SelenideElement imageInAddedPost =
+            $x("(//div[@class= 'orangehrm-buzz-post-body'])[1]//img");
     public final SelenideElement sharePhotoButton = $x("//button[text()= ' Share Photos']");
     public final SelenideElement sharePhotoPopUpTitle =$x("//p[text()= 'Share Photos']");
-    //public final SelenideElement sharePhotoPopUp = $x("//div[@role = 'document']");
     public final SelenideElement inputPhoto = $x("//input[@type= 'file']");
     public final SelenideElement uploadedPhotoInPopUp = $x("//div[@class ='orangehrm-photo-input']//img");
     public final SelenideElement loadingSpiner = $x("//*[@class = 'oxd-loading-spinner']");
 
-
+    /*
+     * Method types a text in input field
+     */
     public BuzzNewsFeedPage typeNewPost(String newPostText){
         textInput.shouldBe(Condition.visible);
         textInput.setValue(newPostText);
         return this;
     }
 
+    /*
+     * Method types a text in input field in pop up window
+     */
     public BuzzNewsFeedPage typeNewPostInPopUpWindow(String newPostText){
         textInputInPopUpWindow.shouldBe(Condition.visible);
         textInputInPopUpWindow.setValue(newPostText);
@@ -51,16 +56,27 @@ public class BuzzNewsFeedPage extends BasePage {
         return this;
     }
 
+    /*
+     * Method checks confirmation window after a new post submitted
+     */
     public BuzzNewsFeedPage checkIfSuccessConfirmationPopUpAppears() {
         successConfirmationPopUp.shouldBe(Condition.visible);
         successConfirmationPopUp.shouldHave(Condition.text("Success\n" + "Successfully Saved"));
         return this;
     }
 
+    /*
+     * Method checks that a new post appeared in the feed
+     */
     public BuzzNewsFeedPage checkIfNewPostAddedtoFeed(String newPostText){
         loadingSpiner.shouldNotBe(Condition.visible);
         newAddedPost.shouldBe(Condition.visible);
         newAddedPost.shouldHave(Condition.exactText(newPostText));
+        return this;
+    }
+
+    public BuzzNewsFeedPage checkIfImageIsVisibleInTheAddedPost() {
+        imageInAddedPost.shouldBe(Condition.visible);
         return this;
     }
 
@@ -72,6 +88,9 @@ public class BuzzNewsFeedPage extends BasePage {
         return this;
     }
 
+    /*
+     * Method checks if a pop-up window opened
+     */
     public BuzzNewsFeedPage checkIfSharePhotoPopUpIsOpened(){
         sharePhotoPopUpTitle.shouldBe(Condition.visible);
         return this;

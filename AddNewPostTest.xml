@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="AddNewPostTests">
-    <test name="Add a new post without an image in the Buzz page">
+    <test name="Add new posts in the Buzz page">
         <parameter name="newPostText" value="Hi there! I'm agent Smith. You're in the Matrix!"/>
         <parameter name="newPostTextInPopUp" value="This is agent Smith again. You're in the Matrix!"/>
         <classes>

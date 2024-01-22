@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5db264f4-b8e5-4964-9d6a-a000f2a8d702" name="Changes" comment="Deleted unused xpath">
-      <change afterPath="$PROJECT_DIR$/AllTestsInOne.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/addbuzznewsfeed/AddNewPostWithImageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AddNewPostTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AddNewPostTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AddNewUserTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AddNewUserTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/common/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AllTestsInOne.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/Cookie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/Cookie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/buzzpage/BuzzNewsFeedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/buzzpage/BuzzNewsFeedPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/addbuzznewsfeed/AddNewPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/addbuzznewsfeed/AddNewPostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/basetest/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/dashboard/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/dashboard/DashboardPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/addbuzznewsfeed/AddNewPostWithImageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/addbuzznewsfeed/AddNewPostWithImageTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,43 +88,19 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewPostTest.xml">
-    <configuration name="AddNewPostTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Orangehrm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="addbuzznewsfeed.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="addbuzznewsfeed" />
-      <option name="MAIN_CLASS_NAME" value="addbuzznewsfeed.AddNewPostTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddNewPostWithImageTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Orangehrm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="addbuzznewsfeed.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="addbuzznewsfeed" />
-      <option name="MAIN_CLASS_NAME" value="addbuzznewsfeed.AddNewPostWithImageTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewPostTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Orangehrm" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/AddNewPostTest.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/jinx_/Desktop/Orangehrm/AddNewUserTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Orangehrm" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/AddNewUserTest.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -144,17 +118,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginFlowPositiveTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Orangehrm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="loginflow.positive.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="loginflow.positive" />
-      <option name="MAIN_CLASS_NAME" value="loginflow.positive.LoginFlowPositiveTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/LoginTest.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/jinx_/Desktop/Orangehrm/UpdateMyInfoTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Orangehrm" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/UpdateMyInfoTest.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
       <method v="2">
@@ -164,10 +141,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewPostTest.xml" />
+        <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/AddNewUserTest.xml" />
+        <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/UpdateMyInfoTest.xml" />
+        <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml" />
         <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/AllTestsInOne.xml" />
-        <item itemvalue="TestNG.AddNewPostTest" />
-        <item itemvalue="TestNG.AddNewPostWithImageTest" />
-        <item itemvalue="TestNG.LoginFlowPositiveTest" />
       </list>
     </recent_temporary>
   </component>

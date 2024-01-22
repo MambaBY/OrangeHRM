@@ -19,10 +19,6 @@ public class AddNewPostWithImageTest extends BaseTest {
     @Step("Add a new post with a photo to the feed.")
     @Parameters({"newPostTextInPopUp"})
     public void addNewPostWithImage(String newPostTextForThePopUp) throws IOException, InterruptedException {
-//        basePage.openLoginPage();
-//        loginPage.enterUserLogin()
-//                .enterUserPassword()
-//                .clickLoginButton();
         basePage.clickLeftSideMenuButton(buzzMenu);
         buzzNewsFeedPage.clickSharePhotoButton()
                         .checkIfSharePhotoPopUpIsOpened()
@@ -30,10 +26,8 @@ public class AddNewPostWithImageTest extends BaseTest {
                         .uploadPhoto()
                         .clickShareButtonInPopUp()
                         .checkIfSuccessConfirmationPopUpAppears()
-                        .checkIfNewPostAddedtoFeed(newPostTextForThePopUp);
-
-
-
+                        .checkIfNewPostAddedtoFeed(newPostTextForThePopUp)
+                        .checkIfImageIsVisibleInTheAddedPost();
         takeScreenshot();
     }
 }

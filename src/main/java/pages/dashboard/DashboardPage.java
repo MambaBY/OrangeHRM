@@ -13,7 +13,6 @@ public class DashboardPage {
     private final SelenideElement pageTitle = $x("//span[@class='oxd-topbar-header-breadcrumb']");
     private final SelenideElement userDropdown = $x("//li[@class='oxd-userdropdown']");
 
-
     /*
      * Method is verifying page URL
      */
@@ -21,7 +20,6 @@ public class DashboardPage {
         webdriver().shouldHave(url(DASHBOARD_PAGE));
         return this;
     }
-
 
     /*
      * Method is verifying page title
@@ -31,7 +29,6 @@ public class DashboardPage {
        pageTitle.shouldHave(Condition.exactText("Dashboard"));
        return this;
     }
-
 
     /*
      * Method is verifying that user label with dropdown is visible on the Dashboard page after user logged in
