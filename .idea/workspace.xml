@@ -8,12 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5db264f4-b8e5-4964-9d6a-a000f2a8d702" name="Changes" comment="Updated logic for the Login flow test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/common/HelperMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/common/GenerateRandomValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/GenerateRandomValues.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/myinfo/MyInfoPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/myinfo/MyInfoPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/myinfo/MyInfoPageElementsSelectors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/myinfo/MyInfoPageElementsSelectors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/LeftMenuButtons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/LeftMenuButtons.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,31 +59,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.Orangehrm [clean].executor": "Run",
-    "Maven.Orangehrm [io.qameta.allure:allure-maven:2.12.0:serve].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewPostTest.xml.executor": "Run",
-    "TestNG.C:/Users/jinx_/Desktop/Orangehrm/AddNewUserTest.xml.executor": "Run",
-    "TestNG.C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml.executor": "Run",
-    "TestNG.C:/Users/jinx_/Desktop/Orangehrm/UpdateMyInfoTest.xml.executor": "Run",
-    "ToolWindowCoverage.ShowToolbar": "false",
-    "code.cleanup.on.save": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/jinx_/Desktop/Orangehrm/src/test/java",
-    "last_opened_file_path": "C:/Project/Project/Suvoda/Auto",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "actions.on.save"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.Orangehrm [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Orangehrm [io.qameta.allure:allure-maven:2.12.0:serve].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewPostTest.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.C:/Users/jinx_/Desktop/Orangehrm/AddNewUserTest.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.C:/Users/jinx_/Desktop/Orangehrm/UpdateMyInfoTest.xml.executor&quot;: &quot;Run&quot;,
+    &quot;ToolWindowCoverage.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/jinx_/Desktop/Orangehrm/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Project/Project/Suvoda/Auto&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="pages.buzzpage" />
@@ -101,7 +97,7 @@
       <recent name="C:\Users\jinx_\Desktop\Orangehrm\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/jinx_/Desktop/Orangehrm/UpdateMyInfoTest.xml">
+  <component name="RunManager" selected="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewPostTest.xml">
     <configuration name="C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewPostTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Orangehrm" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/AddNewPostTest.xml" />
@@ -154,10 +150,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewPostTest.xml" />
+        <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/AddNewUserTest.xml" />
         <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/UpdateMyInfoTest.xml" />
         <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml" />
-        <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/AddNewUserTest.xml" />
-        <item itemvalue="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewPostTest.xml" />
         <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/AllTestsInOne.xml" />
       </list>
     </recent_temporary>
@@ -165,7 +161,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-17.0.9-corretto-17.0.9-4caba194b151-107bc6b7" />
+        <option value="jdk-17.0.10-corretto-17.0.10-4caba194b151-5cd809f4" />
       </set>
     </attachedChunks>
   </component>

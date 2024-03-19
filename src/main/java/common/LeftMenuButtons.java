@@ -1,8 +1,9 @@
 package common;
 
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.By;
 
-import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Selenide.$;
 
 /*
  * Class contains paths to the left menu buttons
@@ -11,17 +12,18 @@ public class LeftMenuButtons {
     /*
      * 'PIM' menu
      */
-    public static final SelenideElement pimMenu = $x("(//li[@class = 'oxd-main-menu-item-wrapper'])[2]");
+    public static final SelenideElement pimMenu = $(By.linkText("PIM"));
 
     /*
      * 'My info' menu
      */
-    public static final SelenideElement myInfo = $x("(//li[@class = 'oxd-main-menu-item-wrapper'])[6]");
+    public static final SelenideElement myInfo = $(By.linkText("My Info"));
 
     /*
      * 'Buzz' menu
      */
-    public static final SelenideElement buzzMenu = $x(" (//li[@class = 'oxd-main-menu-item-wrapper'])[12]");
+    public static final SelenideElement buzzMenu = $(By.linkText("Buzz"));
+
 
 
 }
