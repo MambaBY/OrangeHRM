@@ -1,5 +1,11 @@
 package common;
+import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.SelenideElement;
 import org.apache.commons.lang3.RandomStringUtils;
+
+import java.security.SecureRandom;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class GenerateRandomValues {
@@ -28,5 +34,17 @@ public class GenerateRandomValues {
         boolean useLetters = true;
         boolean useNumbers = true;
         return RandomStringUtils.random(length, useLetters, useNumbers);
+    }
+
+    /*
+     * Method that is selecting random value in the dropdown
+     */
+    public static String generateRandomOptionInList(ElementsCollection collection){
+        List<String> options = new ArrayList<>();
+        for (SelenideElement element : collection) {
+            options.add(element.getText());
+        }
+        SecureRandom random = new SecureRandom();
+        return options.get(random.nextInt(options.size()));
     }
 }

@@ -7,15 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5db264f4-b8e5-4964-9d6a-a000f2a8d702" name="Changes" comment="Code cleanup">
+    <list default="true" id="5db264f4-b8e5-4964-9d6a-a000f2a8d702" name="Changes" comment="Updated logic for the Login flow test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/common/HelperMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/common/GenerateRandomValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/GenerateRandomValues.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/loginpage/OrangeHrmLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/loginpage/OrangeHrmLoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/addbuzznewsfeed/AddNewPostTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/addbuzznewsfeed/AddNewPostTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/endtoend/addnewuser/AddNewUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/endtoend/addnewuser/AddNewUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/endtoend/updatemyinfo/UpdateMyInfoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/endtoend/updatemyinfo/UpdateMyInfoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/loginflow/negative/LoginFlowNegativeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/loginflow/negative/LoginFlowNegativeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/loginflow/positive/LoginFlowPositiveTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/loginflow/positive/LoginFlowPositiveTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/myinfo/MyInfoPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/myinfo/MyInfoPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/myinfo/MyInfoPageElementsSelectors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/myinfo/MyInfoPageElementsSelectors.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +101,7 @@
       <recent name="C:\Users\jinx_\Desktop\Orangehrm\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml">
+  <component name="RunManager" selected="TestNG.C:/Users/jinx_/Desktop/Orangehrm/UpdateMyInfoTest.xml">
     <configuration name="C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewPostTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Orangehrm" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/AddNewPostTest.xml" />
@@ -156,10 +154,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/UpdateMyInfoTest.xml" />
         <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml" />
         <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/AddNewUserTest.xml" />
         <item itemvalue="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewPostTest.xml" />
-        <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/UpdateMyInfoTest.xml" />
         <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/AllTestsInOne.xml" />
       </list>
     </recent_temporary>
@@ -196,7 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710867149278</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Updated logic for the Login flow test">
+      <option name="closed" value="true" />
+      <created>1710868556546</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1710868556546</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -215,7 +221,8 @@
     <MESSAGE value="Deleted unused xpath" />
     <MESSAGE value="Some selectors were updated. Selectors were separated into separate classes." />
     <MESSAGE value="Code cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code cleanup" />
+    <MESSAGE value="Updated logic for the Login flow test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated logic for the Login flow test" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">

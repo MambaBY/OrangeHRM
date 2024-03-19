@@ -23,6 +23,15 @@ public class Constants {
     public static class ValidationMassages {
         public static final String REQUIRED = "Required";
         public static final String INVALID_CREDENTIALS = "Invalid credentials";
+        public static final String DATA_UPDATED_CONFIRMATION_POPUP = "Success\n Successfully Updated";
+    }
+
+    public static class DatePatterns {
+        public static final String DATE_FORMAT_PATTERN = "yyyy-MM-dd";
+    }
+
+    public static class LengthOfGeneratedRandomValues {
+        public static final int DRIVER_LICENSE_NUMBER_LENGTH = 8;
 
     }
 

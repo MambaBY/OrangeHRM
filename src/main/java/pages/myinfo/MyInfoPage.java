@@ -1,21 +1,20 @@
 package pages.myinfo;
 
-import com.codeborne.selenide.ElementsCollection;
-import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.Keys;
 import pages.basepage.BasePage;
 
-import java.security.SecureRandom;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
 
-import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selenide.$x;
-import static com.codeborne.selenide.Selenide.sleep;
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static common.GenerateRandomValues.generateRandomDriversLicenseNumber;
+import static common.HelperMethods.clearInputField;
+import static common.HelperMethods.setNewOptionInDropDown;
+import static constants.Constants.DatePatterns.DATE_FORMAT_PATTERN;
+import static constants.Constants.LengthOfGeneratedRandomValues.DRIVER_LICENSE_NUMBER_LENGTH;
+import static constants.Constants.ValidationMassages.DATA_UPDATED_CONFIRMATION_POPUP;
+import static java.lang.Thread.sleep;
 import static pages.myinfo.MyInfoPageElementsSelectors.*;
 
 public class MyInfoPage extends BasePage {
@@ -25,73 +24,43 @@ public class MyInfoPage extends BasePage {
         return this;
     }
 
-    public MyInfoPage changeUserFirstName(String firstNameUpdated) {
+    public MyInfoPage changeUserFirstName(String firstNameUpdated) throws InterruptedException {
         sleep(5000);
-        firstName.sendKeys(Keys.CONTROL + "A");
-        firstName.sendKeys(Keys.DELETE);
+        clearInputField(firstName);
         firstName.setValue(firstNameUpdated);
         return this;
     }
     public MyInfoPage changeUserLastName(String lastNameUpdated) {
-        lastName.sendKeys(Keys.CONTROL + "A");
-        lastName.sendKeys(Keys.BACK_SPACE);
+        clearInputField(lastName);
         lastName.setValue(lastNameUpdated);
         return this;
     }
 
 
     public MyInfoPage changeDriverLicenseNumber() {
-        driverLicenseNumber.sendKeys(Keys.CONTROL + "A");
-        driverLicenseNumber.sendKeys(Keys.BACK_SPACE);
-        driverLicenseNumber.setValue(generateRandomDriversLicenseNumber(8));
+        clearInputField(driverLicenseNumber);
+        driverLicenseNumber.setValue(generateRandomDriversLicenseNumber(DRIVER_LICENSE_NUMBER_LENGTH));
         return this;
     }
 
     public MyInfoPage changeDriverLicenseExpiryDate() {
         Calendar cal = Calendar.getInstance();
         cal.add(Calendar.YEAR, 2);
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        DateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT_PATTERN);
         String toDate = dateFormat.format(cal.getTime());
-        driverLicenseExpiryDate.sendKeys(Keys.CONTROL + "A");
-        driverLicenseExpiryDate.sendKeys(Keys.BACK_SPACE);
+        clearInputField(driverLicenseExpiryDate);
         driverLicenseExpiryDate.setValue(toDate);
         driverLicenseExpiryDate.scrollIntoView(true);
         return this;
     }
 
-    /*
-     * Method that is selecting random value in the dropdown on the MyInfo page
-     */
-    public String generateRandomOptionInList(ElementsCollection collection){
-        List<String> options = new ArrayList<>();
-        for (SelenideElement element : collection) {
-            options.add(element.getText());
-        }
-        SecureRandom random = new SecureRandom();
-        return options.get(random.nextInt(options.size()));
-    }
-
     public MyInfoPage changeNationality() {
-        String currentNationality = listOfNationalities.getText();
-        listOfNationalities.click();
-        String newNationality = generateRandomOptionInList(listOfElementsInDropDown);
-        while (newNationality.equals(currentNationality) || newNationality.equals("-- Select --")){
-            newNationality = generateRandomOptionInList(listOfElementsInDropDown);
-        }
-        $x("//div[@role='listbox']/div[@role='option']/span[(text() = '" + newNationality + "')]").click();
-        listOfNationalities.shouldBe(exactText(newNationality));
+        setNewOptionInDropDown(preSelectedNationality, listOfElementsInDropDown, dynamicXpath);
         return this;
     }
 
     public MyInfoPage changeMaritalStatus() {
-        String currentMaritalStatus = maritalStatus.getText();
-        maritalStatus.click();
-        String newMaritalStatus = generateRandomOptionInList(listOfElementsInDropDown);
-        while (newMaritalStatus.equals(currentMaritalStatus) || newMaritalStatus.equals("-- Select --")){
-            newMaritalStatus = generateRandomOptionInList(listOfElementsInDropDown);
-        }
-        $x("//div[@role='listbox']/div[@role='option']/span[(text() = '"+ newMaritalStatus +"')]").click();
-        maritalStatus.shouldBe(exactText(newMaritalStatus));
+        setNewOptionInDropDown(preSelectedMaritalStatus, listOfElementsInDropDown,dynamicXpath);
         return this;
     }
 
@@ -103,7 +72,7 @@ public class MyInfoPage extends BasePage {
 
     public MyInfoPage checkIfSuccessConfirmationPopUpAppears() {
         successConfirmationPopUp.shouldBe(visible);
-        successConfirmationPopUp.shouldHave(text("Success\n Successfully Updated"));
+        successConfirmationPopUp.shouldHave(text(DATA_UPDATED_CONFIRMATION_POPUP));
         return this;
     }
 

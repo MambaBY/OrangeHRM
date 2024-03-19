@@ -14,13 +14,15 @@ public class MyInfoPageElementsSelectors {
             $x("//label[text() = \"Driver's License Number\"]/following::input[1]");
     protected static final SelenideElement driverLicenseExpiryDate =
             $x("//label[text() = 'License Expiry Date']/following::input[1]");
-    protected static final SelenideElement listOfNationalities =
+    protected static final SelenideElement preSelectedNationality =
             $x("//label[text()='Nationality']/following::div[1]");
     protected static final ElementsCollection listOfElementsInDropDown =
             $$x("//div[@role='listbox']/div");
-    protected static final SelenideElement maritalStatus =
+    protected static final SelenideElement preSelectedMaritalStatus =
             $x("//label[text()='Marital Status']/following::div[1]");
-       protected static final SelenideElement savePersonalDetailsButton =
+    protected static final SelenideElement savePersonalDetailsButton =
             $x("(//button[@type='submit'])[1]");
     protected static final SelenideElement successConfirmationPopUp = $(By.id("oxd-toaster_1"));
+
+    protected static final String dynamicXpath = "//div[@role='listbox']/div[@role='option']/span[(text() = '%s')]";
 }
