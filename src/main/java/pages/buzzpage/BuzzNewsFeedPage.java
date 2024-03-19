@@ -54,7 +54,7 @@ public class BuzzNewsFeedPage extends BasePage {
     /*
      * Method checks that a new post appeared in the feed
      */
-    public BuzzNewsFeedPage checkIfNewPostAddedtoFeed(String newPostText){
+    public BuzzNewsFeedPage checkIfNewPostAddedToFeed(String newPostText){
         loadingSpinner.shouldNotBe(visible);
         newAddedPost.shouldBe(visible);
         newAddedPost.shouldHave(exactText(newPostText));

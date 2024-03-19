@@ -28,7 +28,7 @@ public class AddNewPostTest extends BaseTest {
                 .clickPostButton()
                 .checkIfSuccessConfirmationPopUpAppears();
         basePage.clickLeftSideMenuButton(buzzMenu);
-        buzzNewsFeedPage.checkIfNewPostAddedtoFeed(newPostText);
+        buzzNewsFeedPage.checkIfNewPostAddedToFeed(newPostText);
 
         takeScreenshot();
     }

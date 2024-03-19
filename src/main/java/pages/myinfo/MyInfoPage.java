@@ -74,9 +74,9 @@ public class MyInfoPage extends BasePage {
     public MyInfoPage changeNationality() {
         String currentNationality = listOfNationalities.getText();
         listOfNationalities.click();
-        String newNationality = generateRandomOptionInList(listOfElementsInDorpDown);
+        String newNationality = generateRandomOptionInList(listOfElementsInDropDown);
         while (newNationality.equals(currentNationality) || newNationality.equals("-- Select --")){
-            newNationality = generateRandomOptionInList(listOfElementsInDorpDown);
+            newNationality = generateRandomOptionInList(listOfElementsInDropDown);
         }
         $x("//div[@role='listbox']/div[@role='option']/span[(text() = '" + newNationality + "')]").click();
         listOfNationalities.shouldBe(exactText(newNationality));
@@ -86,9 +86,9 @@ public class MyInfoPage extends BasePage {
     public MyInfoPage changeMaritalStatus() {
         String currentMaritalStatus = maritalStatus.getText();
         maritalStatus.click();
-        String newMaritalStatus = generateRandomOptionInList(listOfElementsInDorpDown);
+        String newMaritalStatus = generateRandomOptionInList(listOfElementsInDropDown);
         while (newMaritalStatus.equals(currentMaritalStatus) || newMaritalStatus.equals("-- Select --")){
-            newMaritalStatus = generateRandomOptionInList(listOfElementsInDorpDown);
+            newMaritalStatus = generateRandomOptionInList(listOfElementsInDropDown);
         }
         $x("//div[@role='listbox']/div[@role='option']/span[(text() = '"+ newMaritalStatus +"')]").click();
         maritalStatus.shouldBe(exactText(newMaritalStatus));

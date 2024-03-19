@@ -17,7 +17,7 @@ public class DashboardPage {
     /*
      * Method is verifying page URL
      */
-    public DashboardPage checkDashboardPageUrlAdress(){
+    public DashboardPage checkDashboardPageUrlAddress(){
         webdriver().shouldHave(url(DASHBOARD_PAGE));
         return this;
     }

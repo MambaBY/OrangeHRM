@@ -23,7 +23,7 @@ public class AddEmployeePage extends BasePage {
     /*
      * Method is verifying that page URL is correct
      */
-    public AddEmployeePage checkAddEmployeePageUrlAdress(){
+    public AddEmployeePage checkAddEmployeePageUrlAddress(){
         webdriver().shouldHave(url(ADD_EMPLOYEE_PAGE));
         return this;
     }

@@ -27,7 +27,7 @@ public class AddNewUserTest extends BaseTest {
         basePage.clickLeftSideMenuButton(pimMenu);
         pimPage.checkIfAddButtonVisible()
                .clickAddButton();
-        addEmployeePage.checkAddEmployeePageUrlAdress()
+        addEmployeePage.checkAddEmployeePageUrlAddress()
                         .fillInFirstName()
                         .fillInLastName()
                         .fillInEmployeeID()

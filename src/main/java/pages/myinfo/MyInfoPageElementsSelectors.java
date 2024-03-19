@@ -16,7 +16,7 @@ public class MyInfoPageElementsSelectors {
             $x("//label[text() = 'License Expiry Date']/following::input[1]");
     protected static final SelenideElement listOfNationalities =
             $x("//label[text()='Nationality']/following::div[1]");
-    protected static final ElementsCollection listOfElementsInDorpDown =
+    protected static final ElementsCollection listOfElementsInDropDown =
             $$x("//div[@role='listbox']/div");
     protected static final SelenideElement maritalStatus =
             $x("//label[text()='Marital Status']/following::div[1]");

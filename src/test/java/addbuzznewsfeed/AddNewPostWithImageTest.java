@@ -26,7 +26,7 @@ public class AddNewPostWithImageTest extends BaseTest {
                         .uploadPhoto()
                         .clickShareButtonInPopUp()
                         .checkIfSuccessConfirmationPopUpAppears()
-                        .checkIfNewPostAddedtoFeed(newPostTextForThePopUp)
+                        .checkIfNewPostAddedToFeed(newPostTextForThePopUp)
                         .checkIfImageIsVisibleInTheAddedPost();
         takeScreenshot();
     }

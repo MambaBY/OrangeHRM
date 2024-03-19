@@ -24,7 +24,7 @@ public class LoginFlowPositiveTest extends BaseTest {
         loginPage.enterUserLogin()
                 .enterUserPassword()
                 .clickLoginButton();
-        dashboardPage.checkDashboardPageUrlAdress()
+        dashboardPage.checkDashboardPageUrlAddress()
                 .checkPageTitle()
                 .checkUserDropdown();
 
