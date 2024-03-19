@@ -8,30 +8,20 @@ import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.visible;
 import static common.Cookie.authorizationCookieName;
 import static common.Cookie.authorizationCookieValue;
-import static constants.Constants.UserCredentials.LOGIN;
-import static constants.Constants.UserCredentials.PASSWORD;
+import static constants.Constants.ValidationMassages.INVALID_CREDENTIALS;
+import static constants.Constants.ValidationMassages.REQUIRED;
 import static pages.loginpage.LoginPageElementsSelectors.*;
 
 
 public class OrangeHrmLoginPage extends BasePage {
 
-    public OrangeHrmLoginPage enterUserLogin() {
-        loginInput.setValue(LOGIN);
+    public OrangeHrmLoginPage enterUserLogin(String login) {
+        loginInput.setValue(login);
         return this;
     }
 
-    public OrangeHrmLoginPage enterInvalidUserLogin(String invalidLogin) {
-        loginInput.setValue(invalidLogin);
-        return this;
-    }
-
-    public OrangeHrmLoginPage enterInvalidUserPassword(String invalidPassword) {
-        passwordInput.setValue(invalidPassword);
-        return this;
-    }
-
-    public OrangeHrmLoginPage enterUserPassword() {
-        passwordInput.setValue(PASSWORD);
+    public OrangeHrmLoginPage enterUserPassword(String password) {
+        passwordInput.setValue(password);
         return this;
     }
 
@@ -42,19 +32,19 @@ public class OrangeHrmLoginPage extends BasePage {
 
     public  OrangeHrmLoginPage checkIfUsernameRequired() {
         validationMessageUsernameRequired.shouldBe(visible);
-        validationMessageUsernameRequired.shouldHave(exactText("Required"));
+        validationMessageUsernameRequired.shouldHave(exactText(REQUIRED));
         return  this;
     }
 
     public  OrangeHrmLoginPage checkIfPasswordRequired() {
         validationMessagePasswordRequired.shouldBe(visible);
-        validationMessagePasswordRequired.shouldHave(exactText("Required"));
+        validationMessagePasswordRequired.shouldHave(exactText(REQUIRED));
         return  this;
     }
 
     public OrangeHrmLoginPage checkInvalidCredentialsAlert() {
         invalidCredentialsAlert.shouldBe(visible);
-        invalidCredentialsAlert.shouldHave(exactText("Invalid credentials"));
+        invalidCredentialsAlert.shouldHave(exactText(INVALID_CREDENTIALS));
         return this;
     }
 

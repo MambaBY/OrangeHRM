@@ -30,8 +30,8 @@ public class LoginFlowNegativeTest extends BaseTest {
     @Step ("Login page. Verify validation error after submitting invalid credentials")
     public void insertInvalidCredentials(String invalidLogin, String invalidPassword) throws IOException {
         basePage.openLoginPage();
-        loginPage.enterInvalidUserLogin(invalidLogin)
-                 .enterInvalidUserPassword(invalidPassword)
+        loginPage.enterUserLogin(invalidLogin)
+                 .enterUserPassword(invalidPassword)
                  .clickLoginButton()
                  .checkInvalidCredentialsAlert();
         takeScreenshot();

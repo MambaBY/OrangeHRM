@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 import static common.LeftMenuButtons.buzzMenu;
+import static constants.Constants.UserCredentials.VALID_LOGIN;
+import static constants.Constants.UserCredentials.VALID_PASSWORD;
 
 @Listeners({ ScreenShooter.class})
 public class AddNewPostTest extends BaseTest {
@@ -20,8 +22,8 @@ public class AddNewPostTest extends BaseTest {
     @Parameters({"newPostText"})
     public void addNewPost(String newPostText) throws IOException {
         basePage.openLoginPage();
-        loginPage.enterUserLogin()
-                .enterUserPassword()
+        loginPage.enterUserLogin(VALID_LOGIN)
+                .enterUserPassword(VALID_PASSWORD)
                 .clickLoginButton();
         basePage.clickLeftSideMenuButton(buzzMenu);
         buzzNewsFeedPage.typeNewPost(newPostText)

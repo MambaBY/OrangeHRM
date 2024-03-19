@@ -6,6 +6,8 @@ import io.qameta.allure.Step;
 import org.testng.annotations.Test;
 
 import static common.LeftMenuButtons.myInfo;
+import static constants.Constants.UserCredentials.VALID_LOGIN;
+import static constants.Constants.UserCredentials.VALID_PASSWORD;
 import static constants.Constants.UsersUpdatedPersonalInfo.NEW_FIRST_NAME;
 import static constants.Constants.UsersUpdatedPersonalInfo.NEW_LAST_NAME;
 
@@ -15,8 +17,8 @@ public class UpdateMyInfoTest extends BaseTest {
     @Step("Update Personal Details on the My info page")
     public void updateMyInfo() throws Exception {
         basePage.openLoginPage();
-        loginPage.enterUserLogin()
-                .enterUserPassword()
+        loginPage.enterUserLogin(VALID_LOGIN)
+                .enterUserPassword(VALID_PASSWORD)
                 .clickLoginButton();
         basePage.clickLeftSideMenuButton(myInfo);
         myInfoPage.checkTheTitle()

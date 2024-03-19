@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
+import static constants.Constants.UserCredentials.VALID_LOGIN;
+import static constants.Constants.UserCredentials.VALID_PASSWORD;
 
 
 @Listeners({ ScreenShooter.class})
@@ -21,8 +23,8 @@ public class LoginFlowPositiveTest extends BaseTest {
     @Step("Verify that the user is logged in successfully")
     public void loginFlowPositive() throws IOException {
         basePage.openLoginPage();
-        loginPage.enterUserLogin()
-                .enterUserPassword()
+        loginPage.enterUserLogin(VALID_LOGIN)
+                .enterUserPassword(VALID_PASSWORD)
                 .clickLoginButton();
         dashboardPage.checkDashboardPageUrlAddress()
                 .checkPageTitle()

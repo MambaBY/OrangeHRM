@@ -11,6 +11,8 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 import static common.LeftMenuButtons.pimMenu;
+import static constants.Constants.UserCredentials.VALID_LOGIN;
+import static constants.Constants.UserCredentials.VALID_PASSWORD;
 import static pages.addempoyee.AddEmployeePage.*;
 
 @Listeners({ ScreenShooter.class})
@@ -21,8 +23,8 @@ public class AddNewUserTest extends BaseTest {
     @Parameters({"password"})
     public void addNewUser(String password) throws IOException {
         basePage.openLoginPage();
-        loginPage.enterUserLogin()
-                .enterUserPassword()
+        loginPage.enterUserLogin(VALID_LOGIN)
+                .enterUserPassword(VALID_PASSWORD)
                 .clickLoginButton();
         basePage.clickLeftSideMenuButton(pimMenu);
         pimPage.checkIfAddButtonVisible()
