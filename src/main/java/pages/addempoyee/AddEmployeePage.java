@@ -1,32 +1,23 @@
 package pages.addempoyee;
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.Keys;
 import pages.basepage.BasePage;
 
-import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.url;
 import static common.GenerateRandomValues.generateRandomName;
 import static common.GenerateRandomValues.generateRandomUserID;
 import static constants.Constants.Urls.ADD_EMPLOYEE_PAGE;
+import static pages.addempoyee.AddEmployeePageElementsSelectors.*;
+
 
 public class AddEmployeePage extends BasePage {
 
     public static String userID;
     public static String userFirstName;
     public static String userLastName;
-    public final SelenideElement firstNameInput = $x("//input[@name='firstName']");
-    public final SelenideElement lastNameInput = $x("//input[@name='lastName']");
-    public final SelenideElement createLoginDetailsToggle = $x("//div[@class='oxd-switch-wrapper']");
-    public final SelenideElement usernameInput =
-            $x("(//div[@class='oxd-form-row'])[2]//input[@data-v-1f99f73c]");
-    public final SelenideElement passwordInput = $x("(//input[@type = 'password'])[1]");
-    public final SelenideElement confirmPasswordInput = $x("(//input[@type = 'password'])[2]");
-    public final SelenideElement saveButton = $x("//button[@type='submit']");
-    public final SelenideElement successConfirmationPopUp = $x("//div[@id='oxd-toaster_1']");
-    public final SelenideElement employeeIdInput = $x("(//input[@data-v-1f99f73c])[5]");
 
 
     /*
@@ -104,8 +95,8 @@ public class AddEmployeePage extends BasePage {
      * Method is verifying that confirmation popup appears after a new user creation
      */
     public AddEmployeePage checkIfSuccessConfirmationPopUpAppears() {
-        successConfirmationPopUp.shouldBe(Condition.visible);
-        successConfirmationPopUp.shouldHave(Condition.text("Success\n" + "Successfully Saved"));
+        successConfirmationPopUp.shouldBe(visible);
+        successConfirmationPopUp.shouldHave(text("Success\n Successfully Saved"));
         return this;
     }
 }

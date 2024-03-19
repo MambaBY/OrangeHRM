@@ -1,34 +1,24 @@
 package pages.loginpage;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
 import pages.basepage.BasePage;
 
-import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Condition.exactText;
+import static com.codeborne.selenide.Condition.visible;
 import static common.Cookie.authorizationCookieName;
 import static common.Cookie.authorizationCookieValue;
 import static constants.Constants.UserCredentials.LOGIN;
 import static constants.Constants.UserCredentials.PASSWORD;
+import static pages.loginpage.LoginPageElementsSelectors.*;
 
 
 public class OrangeHrmLoginPage extends BasePage {
-    private final SelenideElement loginInput = $x("//input[@name='username']");
-    private final SelenideElement passwordInput = $x("//input[@name='password']");
-    private final SelenideElement loginButton = $x("//button[@type='submit']");
-    private final SelenideElement validationMessageUsernameRequired =
-            $x("(//span[text() = 'Required'])[1]");
-    private final SelenideElement validationMessagePasswordRequired =
-            $x("(//span[text() = 'Required'])[2]");
-    private final SelenideElement invalidCredentialsAlert = $x("//div[@role= 'alert']");
-
 
     public OrangeHrmLoginPage enterUserLogin() {
         loginInput.setValue(LOGIN);
         return this;
     }
-
 
     public OrangeHrmLoginPage enterInvalidUserLogin(String invalidLogin) {
         loginInput.setValue(invalidLogin);
@@ -51,20 +41,20 @@ public class OrangeHrmLoginPage extends BasePage {
     }
 
     public  OrangeHrmLoginPage checkIfUsernameRequired() {
-        validationMessageUsernameRequired.shouldBe(Condition.visible);
-        validationMessageUsernameRequired.shouldHave(Condition.exactText("Required"));
+        validationMessageUsernameRequired.shouldBe(visible);
+        validationMessageUsernameRequired.shouldHave(exactText("Required"));
         return  this;
     }
 
     public  OrangeHrmLoginPage checkIfPasswordRequired() {
-        validationMessagePasswordRequired.shouldBe(Condition.visible);
-        validationMessagePasswordRequired.shouldHave(Condition.exactText("Required"));
+        validationMessagePasswordRequired.shouldBe(visible);
+        validationMessagePasswordRequired.shouldHave(exactText("Required"));
         return  this;
     }
 
-    public OrangeHrmLoginPage checkInavalidCredentialsAlert() {
-        invalidCredentialsAlert.shouldBe(Condition.visible);
-        invalidCredentialsAlert.shouldHave(Condition.exactText("Invalid credentials"));
+    public OrangeHrmLoginPage checkInvalidCredentialsAlert() {
+        invalidCredentialsAlert.shouldBe(visible);
+        invalidCredentialsAlert.shouldHave(exactText("Invalid credentials"));
         return this;
     }
 

@@ -5,13 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5db264f4-b8e5-4964-9d6a-a000f2a8d702" name="Changes" comment="Deleted unused xpath">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/addempoyee/AddEmployeePageElementsSelectors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/buzzpage/BuzzFeedPageElementsSelectors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/loginpage/LoginPageElementsSelectors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/myinfo/MyInfoPageElementsSelectors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/pim/PimPageElementsSelectors.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AddNewPostTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/AddNewPostTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AllTestsInOne.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/common/Cookie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/Cookie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Task.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Task.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/addempoyee/AddEmployeePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/addempoyee/AddEmployeePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/buzzpage/BuzzNewsFeedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/buzzpage/BuzzNewsFeedPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/dashboard/DashboardPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/dashboard/DashboardPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/addbuzznewsfeed/AddNewPostWithImageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/addbuzznewsfeed/AddNewPostWithImageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/loginpage/OrangeHrmLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/loginpage/OrangeHrmLoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/myinfo/MyInfoPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/myinfo/MyInfoPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/pim/PimPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/pim/PimPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/endtoend/addnewuser/AddNewUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/endtoend/addnewuser/AddNewUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/endtoend/updatemyinfo/UpdateMyInfoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/endtoend/updatemyinfo/UpdateMyInfoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/loginflow/negative/LoginFlowNegativeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/loginflow/negative/LoginFlowNegativeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/Photo/image.jpeg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +57,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -60,14 +73,21 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Maven.Orangehrm [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Orangehrm [io.qameta.allure:allure-maven:2.12.0:serve].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewPostTest.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.C:/Users/jinx_/Desktop/Orangehrm/AddNewUserTest.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.C:/Users/jinx_/Desktop/Orangehrm/UpdateMyInfoTest.xml.executor&quot;: &quot;Run&quot;,
     &quot;ToolWindowCoverage.ShowToolbar&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/jinx_/Desktop/Orangehrm/src/test/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jinx_/Desktop/Orangehrm&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Project/Project/Suvoda/Auto&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -87,7 +107,7 @@
       <recent name="C:\Users\jinx_\Desktop\Orangehrm\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewPostTest.xml">
+  <component name="RunManager" selected="TestNG.C:/Users/jinx_/Desktop/Orangehrm/AddNewUserTest.xml">
     <configuration name="C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewPostTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Orangehrm" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/AddNewPostTest.xml" />
@@ -140,13 +160,20 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewPostTest.xml" />
         <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/AddNewUserTest.xml" />
+        <item itemvalue="TestNG.C:/Users/Siarhei.Paulovich/Desktop/OrangeHRM/AddNewPostTest.xml" />
         <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/UpdateMyInfoTest.xml" />
         <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/LoginTest.xml" />
         <item itemvalue="TestNG.C:/Users/jinx_/Desktop/Orangehrm/AllTestsInOne.xml" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-corretto-17.0.9-4caba194b151-107bc6b7" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

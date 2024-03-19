@@ -1,9 +1,10 @@
 package pages.dashboard;
 
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.exactText;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.webdriver;
 import static com.codeborne.selenide.WebDriverConditions.url;
@@ -25,8 +26,8 @@ public class DashboardPage {
      * Method is verifying page title
      */
     public DashboardPage checkPageTitle(){
-       pageTitle.shouldBe(Condition.visible);
-       pageTitle.shouldHave(Condition.exactText("Dashboard"));
+       pageTitle.shouldBe(visible);
+       pageTitle.shouldHave(exactText("Dashboard"));
        return this;
     }
 
@@ -34,7 +35,7 @@ public class DashboardPage {
      * Method is verifying that user label with dropdown is visible on the Dashboard page after user logged in
      */
     public DashboardPage checkUserDropdown(){
-        userDropdown.shouldBe(Condition.visible);
+        userDropdown.shouldBe(visible);
         return this;
     }
 }

@@ -1,6 +1,5 @@
 package pages.myinfo;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.Keys;
@@ -13,57 +12,33 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selenide.$x;
+import static com.codeborne.selenide.Selenide.sleep;
 import static common.GenerateRandomValues.generateRandomDriversLicenseNumber;
+import static pages.myinfo.MyInfoPageElementsSelectors.*;
 
 public class MyInfoPage extends BasePage {
-    private final SelenideElement title = $x("//h6[text() = 'Personal Details']");
-    private final SelenideElement firstName = $x("//input[@name='firstName']");
-    private final SelenideElement lastName = $x("//input[@name='lastName']");
-    private final SelenideElement userNickName =
-            $x("//label[text() = 'Nickname']/following::input[1]");
-    private final SelenideElement driverLicenseNumber =
-            $x("//label[text() = \"Driver's License Number\"]/following::input[1]");
-    private final SelenideElement driverLicenseExpiryDate =
-            $x("//label[text() = 'License Expiry Date']/following::input[1]");
-    private final SelenideElement listOfNationalities =
-            $x("//label[text()='Nationality']/following::div[1]");
-    private final ElementsCollection listOfElementsInDorpDown =
-            $$x("//div[@role='listbox']/div");
-    private final SelenideElement maritalStatus =
-            $x("//label[text()='Marital Status']/following::div[1]");
-    private final SelenideElement isSmokerCheckbox = $x("//label[text()= 'Yes']");
-    private final SelenideElement smokerCheckMark = $x("(//input[@type= 'checkbox'])[1]");
-    private final SelenideElement savePersonalDetailsButton =
-            $x("(//button[@type='submit'])[1]");
-    private final SelenideElement successConfirmationPopUp =
-            $x("//div[@id='oxd-toaster_1']");
 
     public MyInfoPage checkTheTitle() {
-        title.shouldBe(Condition.visible);
+        title.shouldBe(visible);
         return this;
     }
 
-    public MyInfoPage changeUserFirstName() {
+    public MyInfoPage changeUserFirstName(String firstNameUpdated) {
         sleep(5000);
         firstName.sendKeys(Keys.CONTROL + "A");
         firstName.sendKeys(Keys.DELETE);
-        firstName.setValue("Agent");
+        firstName.setValue(firstNameUpdated);
         return this;
     }
-    public MyInfoPage changeUserLastName() {
+    public MyInfoPage changeUserLastName(String lastNameUpdated) {
         lastName.sendKeys(Keys.CONTROL + "A");
         lastName.sendKeys(Keys.BACK_SPACE);
-        lastName.setValue("Smith");
+        lastName.setValue(lastNameUpdated);
         return this;
     }
 
-    public MyInfoPage changeUserNickName() {
-        userNickName.sendKeys(Keys.CONTROL + "A");
-        userNickName.sendKeys(Keys.BACK_SPACE);
-        userNickName.setValue("asmith");
-        return this;
-    }
 
     public MyInfoPage changeDriverLicenseNumber() {
         driverLicenseNumber.sendKeys(Keys.CONTROL + "A");
@@ -72,7 +47,7 @@ public class MyInfoPage extends BasePage {
         return this;
     }
 
-    public MyInfoPage changeDriverLicenseExpiryDate() throws Exception {
+    public MyInfoPage changeDriverLicenseExpiryDate() {
         Calendar cal = Calendar.getInstance();
         cal.add(Calendar.YEAR, 2);
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -88,13 +63,12 @@ public class MyInfoPage extends BasePage {
      * Method that is selecting random value in the dropdown on the MyInfo page
      */
     public String generateRandomOptionInList(ElementsCollection collection){
-        List<String> options = new ArrayList();
+        List<String> options = new ArrayList<>();
         for (SelenideElement element : collection) {
             options.add(element.getText());
         }
         SecureRandom random = new SecureRandom();
-        String newOption = options.get(random.nextInt(options.size()));
-        return newOption;
+        return options.get(random.nextInt(options.size()));
     }
 
     public MyInfoPage changeNationality() {
@@ -105,7 +79,7 @@ public class MyInfoPage extends BasePage {
             newNationality = generateRandomOptionInList(listOfElementsInDorpDown);
         }
         $x("//div[@role='listbox']/div[@role='option']/span[(text() = '" + newNationality + "')]").click();
-        listOfNationalities.shouldBe(Condition.exactText(newNationality));
+        listOfNationalities.shouldBe(exactText(newNationality));
         return this;
     }
 
@@ -117,18 +91,7 @@ public class MyInfoPage extends BasePage {
             newMaritalStatus = generateRandomOptionInList(listOfElementsInDorpDown);
         }
         $x("//div[@role='listbox']/div[@role='option']/span[(text() = '"+ newMaritalStatus +"')]").click();
-        maritalStatus.shouldBe(Condition.exactText(newMaritalStatus));
-        return this;
-    }
-
-    public MyInfoPage changeSmokerStatus (){
-        boolean isSmokerStatus = smokerCheckMark.isSelected();
-        isSmokerCheckbox.click();
-        if (!isSmokerStatus) {
-            smokerCheckMark.shouldBe(Condition.checked);
-        } else {
-            smokerCheckMark.shouldNotBe(Condition.checked);
-        }
+        maritalStatus.shouldBe(exactText(newMaritalStatus));
         return this;
     }
 
@@ -139,8 +102,8 @@ public class MyInfoPage extends BasePage {
     }
 
     public MyInfoPage checkIfSuccessConfirmationPopUpAppears() {
-        successConfirmationPopUp.shouldBe(Condition.visible);
-        successConfirmationPopUp.shouldHave(Condition.text("Success\n" + "Successfully Updated"));
+        successConfirmationPopUp.shouldBe(visible);
+        successConfirmationPopUp.shouldHave(text("Success\n Successfully Updated"));
         return this;
     }
 

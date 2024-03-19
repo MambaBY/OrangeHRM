@@ -37,7 +37,7 @@ public class AddNewUserTest extends BaseTest {
                         .fillInPasswordConfirmation(password)
                         .clickOnSaveButton()
                         .checkIfSuccessConfirmationPopUpAppears();
-                        takeScreenshot();
+        takeScreenshot();
     }
 
     @Test
@@ -50,6 +50,6 @@ public class AddNewUserTest extends BaseTest {
                .clickOnSearchButton()
                .checkSearchResult()
                .checkFoundUsersData(userID, userFirstName,userLastName);
-                takeScreenshot();
+        takeScreenshot();
     }
 }

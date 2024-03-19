@@ -6,6 +6,8 @@ import io.qameta.allure.Step;
 import org.testng.annotations.Test;
 
 import static common.LeftMenuButtons.myInfo;
+import static constants.Constants.UsersUpdatedPersonalInfo.NEW_FIRST_NAME;
+import static constants.Constants.UsersUpdatedPersonalInfo.NEW_LAST_NAME;
 
 public class UpdateMyInfoTest extends BaseTest {
     @Test
@@ -18,14 +20,12 @@ public class UpdateMyInfoTest extends BaseTest {
                 .clickLoginButton();
         basePage.clickLeftSideMenuButton(myInfo);
         myInfoPage.checkTheTitle()
-                  .changeUserFirstName()
-                  .changeUserLastName()
-                  .changeUserNickName()
+                  .changeUserFirstName(NEW_FIRST_NAME)
+                  .changeUserLastName(NEW_LAST_NAME)
                   .changeDriverLicenseNumber()
                   .changeDriverLicenseExpiryDate()
                   .changeNationality()
                   .changeMaritalStatus()
-                  .changeSmokerStatus()
                   .saveMyInfoChanges()
                   .checkIfSuccessConfirmationPopUpAppears();
         takeScreenshot();

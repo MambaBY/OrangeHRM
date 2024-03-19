@@ -33,7 +33,7 @@ public class LoginFlowNegativeTest extends BaseTest {
         loginPage.enterInvalidUserLogin(invalidLogin)
                  .enterInvalidUserPassword(invalidPassword)
                  .clickLoginButton()
-                 .checkInavalidCredentialsAlert();
+                 .checkInvalidCredentialsAlert();
         takeScreenshot();
     }
 

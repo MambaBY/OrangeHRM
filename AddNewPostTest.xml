@@ -2,8 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="AddNewPostTests">
     <test name="Add new posts in the Buzz page">
-        <parameter name="newPostText" value="Hi there! I'm agent Smith. You're in the Matrix!"/>
-        <parameter name="newPostTextInPopUp" value="This is agent Smith again. You're in the Matrix!"/>
+        <parameter name="newPostText" value="New post without an image!"/>
+        <parameter name="newPostTextInPopUp" value="New post with an image!"/>
         <classes>
             <class name="addbuzznewsfeed.AddNewPostTest"/>
             <class name="addbuzznewsfeed.AddNewPostWithImageTest"/>

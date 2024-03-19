@@ -9,3 +9,80 @@
  * несколько атомарных тестов, которые проверяют одну фичу
  * пару end-2-end тестов, которые проверяют какой-нибудь флоу (например, возможность добавить нового работника в PIM и проверить его наличие в таблице)
  * ну и какие сам посчитаешь нужным Должен получиться небольшой фреймворк с набором самых важных тестов. Как в реале.
+
+ _________________________________________________________________________________________________________________________
+ Почему поиск элементов по xPath применяется там, где проще использовать поиск по CSS-селекторам?
+ Например:
+  $(By.name(“firstName”))
+  $(“#oxd-toaster_1")
+  $(“.oxd-switch-wrapper”)
+ [Наверно, потому, что Сергей поленился искать их сам, но положился на DevTools, где в контекстном меню есть пункт, который помогает найти xPath ))) ]
+ Этот момент нужно всюду переделать — дополнительная тренировка будет — и, заодно, выдели селекторы каждой из страниц в отдельные файлы, а в классы страниц их просто импортируй (это для страниц, где элементов много, а не пару).
+
+
+ При запуске AddNewUserTest получил ошибку по обоим кейсам:
+ Caused by: NoSuchElementException: no such element: Unable to locate element: {“method”:“xpath”,“selector”:“//div[@data-v-0dea79bd]/div”}
+ Нужно исправить селектор — видимо, имя класса меняется динамически и не поможет в поиске элемента.
+ Element: ‘<div class=“oxd-toast-container oxd-toast-container--bottom” id=“oxd-toaster_1” displayed:false></div>’
+ Actual value: hidden
+ Тут хромает логика )
+ Статичные методы и enum’ы можно вызывать по их имени без имени класса. Например:
+ successConfirmationPopUp.shouldBe(Condition.visible);
+ можно заменить на
+ successConfirmationPopUp.shouldBe(visible);
+ Так намного легче читается.
+ Проделай так со всеми вызовами статичных методов в репозитории, пжл, — для тренировки ) тоже
+ Ничего не мешает объединить две плюсуемые строчки в одну:
+ “Success\n” + “Successfully Saved”
+ Таких мест много. Может, выделить эту строчку/такие строчки в константу?
+ Создавать методы для ввода отдельного вида значений не принято:
+ enterInvalidUserLogin()
+ enterInvalidUserPassword()
+ Следует использовать общий метод ввода, а значения передавать именованные (тут ты правильно сделал) — чтобы сохранить читабельность кода:
+ loginPage
+      .enterUserLogin(invalidLogin)
+      .enterUserPassword(invalidPassword)
+ При этом общие методы нужно немного доработать:
+ public OrangeHrmLoginPage enterUserLogin(String loginName) {
+   loginInput.setValue(loginName);
+   return this;
+ }
+ и для логина с правильным значением передавать LOGIN (точнее, validLogin). То же верно и для enterUserPassword().
+ Повторяющийся код лучше выделять в утилитарные методы типа clearInputField(SelenideElement element):
+ element.sendKeys(Keys.CONTROL + “A”);
+ element.sendKeys(Keys.DELETE);
+ Использовать magic numbers и magic strings вроде asmith запрещается:
+ public MyInfoPage changeUserNickName() {
+   userNickName.sendKeys(Keys.CONTROL + “A”);
+   userNickName.sendKeys(Keys.BACK_SPACE);
+   userNickName.setValue(“asmith”);
+   return this;
+ }
+ Правильно делать так:
+ public MyInfoPage changeUserNickName(String newNick) {
+   userNickName.sendKeys(Keys.CONTROL + “A”);
+   userNickName.sendKeys(Keys.BACK_SPACE);
+   userNickName.setValue(newNick);
+   return this;
+ }
+ Кое-где проскальзывают серые throws Exception — там, где они не нужны.
+ Поэтому лучше включить очистку кода при сохранении файла, а сохранение файлов сделать автоматическим.
+ Кроме того, сомнительный код лучше окружать блоком try/catch — тогда отсохшие throws Exception точно появляться не будут )
+ Из-за этого, кстати, метод Thread.sleep() лучше выделить в отдельный, с другим именем.
+ Код вроде
+ $x(“//div[@role=‘listbox’]/div[@role=‘option’]/span[(text() = ‘“+ newMaritalStatus +“’)]“)
+ лучше выделять в отдельные методы. Смесь логики и поиска элементов — это всегда плохо.
+ Обращай внимание на синтаксические ошибки вроде Adress или lenght ))
+ В правом верхнем углу их наличие отмечается желтым треугольничком с цифрой.
+ Если у if есть ветка else, то от восклицательного знака в if лучше уйти, поменяв исполняемые блоки if и else, например, тут:
+ if (!isSmokerStatus) {
+   smokerCheckMark.shouldBe(Condition.checked);
+ } else {
+   smokerCheckMark.shouldNotBe(Condition.checked);
+ }
+ Есть лишние импорты, вроде
+ import org.openqa.selenium.Cookie;
+ в Constants.java. Лучше включить опцию Automatically optimize imports on save
+ https://www.jetbrains.com/help/idea/creating-and-optimizing-imports.html#optimize-imports
+ чтобы такое не попадало в репозиторий никогда.
+ Автоматическое сохранение файлов по времени тоже не помешает )
