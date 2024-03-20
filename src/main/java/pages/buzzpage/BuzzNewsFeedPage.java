@@ -5,6 +5,7 @@ import pages.basepage.BasePage;
 import java.io.File;
 
 import static com.codeborne.selenide.Condition.*;
+import static constants.Constants.ValidationMassages.DATA_SAVED_CONFIRMATION_POPUP;
 import static pages.buzzpage.BuzzFeedPageElementsSelectors.*;
 
 
@@ -47,7 +48,7 @@ public class BuzzNewsFeedPage extends BasePage {
      */
     public BuzzNewsFeedPage checkIfSuccessConfirmationPopUpAppears() {
         successConfirmationPopUp.shouldBe(visible);
-        successConfirmationPopUp.shouldHave(text("Success\n Successfully Saved"));
+        successConfirmationPopUp.shouldHave(text(DATA_SAVED_CONFIRMATION_POPUP));
         return this;
     }
 

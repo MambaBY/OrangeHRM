@@ -4,6 +4,7 @@ import pages.basepage.BasePage;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
+import static constants.Constants.ValidationMassages.RECORDS_FOUND;
 import static pages.pim.PimPageElementsSelectors.*;
 
 
@@ -39,7 +40,7 @@ public class PimPage extends BasePage {
      */
     public PimPage checkSearchResult() {
         recordsFoundCounter.shouldBe(visible);
-        recordsFoundCounter.shouldBe(text("(1) Record Found"));
+        recordsFoundCounter.shouldBe(text(RECORDS_FOUND));
         return this;
     }
 

@@ -9,7 +9,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5db264f4-b8e5-4964-9d6a-a000f2a8d702" name="Changes" comment="Updated logic for the Login flow test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/common/LeftMenuButtons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/common/LeftMenuButtons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/addempoyee/AddEmployeePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/addempoyee/AddEmployeePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/buzzpage/BuzzNewsFeedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/buzzpage/BuzzNewsFeedPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

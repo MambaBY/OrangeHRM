@@ -86,7 +86,7 @@
           <target>8</target>
         </configuration>
       </plugin>
-<!--Plagins for Allure report -->
+<!--Plugins for Allure report -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>

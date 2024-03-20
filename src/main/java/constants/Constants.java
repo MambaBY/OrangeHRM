@@ -24,6 +24,8 @@ public class Constants {
         public static final String REQUIRED = "Required";
         public static final String INVALID_CREDENTIALS = "Invalid credentials";
         public static final String DATA_UPDATED_CONFIRMATION_POPUP = "Success\n Successfully Updated";
+        public static final String DATA_SAVED_CONFIRMATION_POPUP = "Success\n Successfully Saved";
+        public static final String RECORDS_FOUND = "(1) Record Found";
     }
 
     public static class DatePatterns {
@@ -32,7 +34,10 @@ public class Constants {
 
     public static class LengthOfGeneratedRandomValues {
         public static final int DRIVER_LICENSE_NUMBER_LENGTH = 8;
-
+        public static final int USER_FIRST_NAME_LENGTH = 5;
+        public static final int USER_LAST_NAME_LENGTH = 8;
+        public static final int USER_ID_LENGTH = 8;
+        public static final int USER_USER_NAME_LENGTH = 8;
     }
 
 }
