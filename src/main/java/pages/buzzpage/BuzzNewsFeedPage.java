@@ -12,7 +12,7 @@ import static pages.buzzpage.BuzzFeedPageElementsSelectors.*;
 public class BuzzNewsFeedPage extends BasePage {
 
 
-    /*
+    /**
      * Method types a text in input field
      */
     public BuzzNewsFeedPage typeNewPost(String newPostText){
@@ -68,6 +68,7 @@ public class BuzzNewsFeedPage extends BasePage {
     }
 
     public BuzzNewsFeedPage clickSharePhotoButton() throws InterruptedException {
+        // TODO Could you get rid of sleeps? Could you configure waiting for elements?
         Thread.sleep(3000);
         loadingSpinner.shouldNotBe(visible);
         sharePhotoButton.shouldBe(visible);
@@ -84,6 +85,7 @@ public class BuzzNewsFeedPage extends BasePage {
     }
 
     public BuzzNewsFeedPage uploadPhoto(){
+        // TODO Will it be valid for all OS? Could Paths.get() be better?
         inputPhoto.uploadFile(new File("src/test/resources/Photo/image.jpeg"));
         uploadedPhotoInPopUp.shouldBe(visible);
         return this;

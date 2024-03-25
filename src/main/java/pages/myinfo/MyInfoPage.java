@@ -30,12 +30,12 @@ public class MyInfoPage extends BasePage {
         firstName.setValue(firstNameUpdated);
         return this;
     }
+
     public MyInfoPage changeUserLastName(String lastNameUpdated) {
         clearInputField(lastName);
         lastName.setValue(lastNameUpdated);
         return this;
     }
-
 
     public MyInfoPage changeDriverLicenseNumber() {
         clearInputField(driverLicenseNumber);

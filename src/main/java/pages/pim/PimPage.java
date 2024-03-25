@@ -49,8 +49,8 @@ public class PimPage extends BasePage {
      */
     public PimPage checkFoundUsersData(String userID, String userFirstName, String userLastName) {
         userSearchResultCard.shouldBe(visible);
-        userIdCulomnInSearchResultTable.shouldBe(text(userID));
-        userFirstNameCulomnInSearchResultTable.shouldBe(text(userFirstName));
+        userIdColumnInSearchResultTable.shouldBe(text(userID));
+        userFirstNameColumnInSearchResultTable.shouldBe(text(userFirstName));
         userLastNameColumnInSearchResultTable.shouldBe(text(userLastName));
         return this;
     }

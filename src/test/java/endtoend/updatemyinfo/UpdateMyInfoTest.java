@@ -22,14 +22,15 @@ public class UpdateMyInfoTest extends BaseTest {
                 .clickLoginButton();
         basePage.clickLeftSideMenuButton(myInfo);
         myInfoPage.checkTheTitle()
-                  .changeUserFirstName(NEW_FIRST_NAME)
-                  .changeUserLastName(NEW_LAST_NAME)
-                  .changeDriverLicenseNumber()
-                  .changeDriverLicenseExpiryDate()
-                  .changeNationality()
-                  .changeMaritalStatus()
-                  .saveMyInfoChanges()
-                  .checkIfSuccessConfirmationPopUpAppears();
+                .changeUserFirstName(NEW_FIRST_NAME)
+                .changeUserLastName(NEW_LAST_NAME)
+                .changeDriverLicenseNumber()
+                .changeDriverLicenseExpiryDate()
+                .changeNationality()
+                .changeMaritalStatus()
+                .saveMyInfoChanges()
+                // TODO Actual value: hidden
+                .checkIfSuccessConfirmationPopUpAppears();
         takeScreenshot();
     }
 }

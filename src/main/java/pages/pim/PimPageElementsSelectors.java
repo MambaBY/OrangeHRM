@@ -16,9 +16,9 @@ public class PimPageElementsSelectors {
     protected static final SelenideElement recordsFoundCounter = $(".orangehrm-horizontal-padding span");
 
     protected static final SelenideElement userSearchResultCard = $(".oxd-table-card");
-    protected static final SelenideElement userIdCulomnInSearchResultTable =
+    protected static final SelenideElement userIdColumnInSearchResultTable =
             $x("(//div[@role='cell'])[2]");
-    protected static final SelenideElement userFirstNameCulomnInSearchResultTable =
+    protected static final SelenideElement userFirstNameColumnInSearchResultTable =
             $x("(//div[@role='cell'])[3]");
     protected static final SelenideElement userLastNameColumnInSearchResultTable =
             $x("(//div[@role='cell'])[4]");
