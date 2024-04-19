@@ -18,6 +18,6 @@ To use the OrangeHRM Testing Framework:
 4. Execute the tests and review the generated Allure reports for detailed insights into test results and any failures.
 
 ## License
-The OrangeHRM Testing Framework is licensed under the [MIT License](LICENSE).
+The OrangeHRM Testing Framework is licensed under the [MIT License](License).
 
 
