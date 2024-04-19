@@ -21,6 +21,7 @@ public class PimPage extends BasePage {
     }
 
     public PimPage inputUserName(String userFirstName, String userLastName) {
+        employeeNameSearchField.shouldBe(visible);
         employeeNameSearchField.setValue(userFirstName + " " + userLastName);
         return this;
     }
@@ -35,7 +36,7 @@ public class PimPage extends BasePage {
         return this;
     }
 
-    /*
+    /**
      * Method checks if the count of users found is equal to 1
      */
     public PimPage checkSearchResult() {
@@ -44,13 +45,13 @@ public class PimPage extends BasePage {
         return this;
     }
 
-    /*
+    /**
      * Method checks if the user card is available in the users table and user's data is appropriate
      */
     public PimPage checkFoundUsersData(String userID, String userFirstName, String userLastName) {
         userSearchResultCard.shouldBe(visible);
-        userIdCulomnInSearchResultTable.shouldBe(text(userID));
-        userFirstNameCulomnInSearchResultTable.shouldBe(text(userFirstName));
+        userIdColumnInSearchResultTable.shouldBe(text(userID));
+        userFirstNameColumnInSearchResultTable.shouldBe(text(userFirstName));
         userLastNameColumnInSearchResultTable.shouldBe(text(userLastName));
         return this;
     }

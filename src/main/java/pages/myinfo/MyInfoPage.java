@@ -14,7 +14,6 @@ import static common.HelperMethods.setNewOptionInDropDown;
 import static constants.Constants.DatePatterns.DATE_FORMAT_PATTERN;
 import static constants.Constants.LengthOfGeneratedRandomValues.DRIVER_LICENSE_NUMBER_LENGTH;
 import static constants.Constants.ValidationMassages.DATA_UPDATED_CONFIRMATION_POPUP;
-import static java.lang.Thread.sleep;
 import static pages.myinfo.MyInfoPageElementsSelectors.*;
 
 public class MyInfoPage extends BasePage {
@@ -24,18 +23,17 @@ public class MyInfoPage extends BasePage {
         return this;
     }
 
-    public MyInfoPage changeUserFirstName(String firstNameUpdated) throws InterruptedException {
-        sleep(5000);
+    public MyInfoPage changeUserFirstName(String firstNameUpdated) {
         clearInputField(firstName);
         firstName.setValue(firstNameUpdated);
         return this;
     }
+
     public MyInfoPage changeUserLastName(String lastNameUpdated) {
         clearInputField(lastName);
         lastName.setValue(lastNameUpdated);
         return this;
     }
-
 
     public MyInfoPage changeDriverLicenseNumber() {
         clearInputField(driverLicenseNumber);

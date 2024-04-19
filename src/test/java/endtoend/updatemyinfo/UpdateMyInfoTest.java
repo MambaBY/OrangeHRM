@@ -1,8 +1,10 @@
 package endtoend.updatemyinfo;
 
 import basetest.BaseTest;
+import com.codeborne.selenide.testng.ScreenShooter;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Step;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import static common.LeftMenuButtons.myInfo;
@@ -11,6 +13,7 @@ import static constants.Constants.UserCredentials.VALID_PASSWORD;
 import static constants.Constants.UsersUpdatedPersonalInfo.NEW_FIRST_NAME;
 import static constants.Constants.UsersUpdatedPersonalInfo.NEW_LAST_NAME;
 
+@Listeners({ScreenShooter.class})
 public class UpdateMyInfoTest extends BaseTest {
     @Test
     @Owner("spaulovich")
@@ -22,14 +25,14 @@ public class UpdateMyInfoTest extends BaseTest {
                 .clickLoginButton();
         basePage.clickLeftSideMenuButton(myInfo);
         myInfoPage.checkTheTitle()
-                  .changeUserFirstName(NEW_FIRST_NAME)
-                  .changeUserLastName(NEW_LAST_NAME)
-                  .changeDriverLicenseNumber()
-                  .changeDriverLicenseExpiryDate()
-                  .changeNationality()
-                  .changeMaritalStatus()
-                  .saveMyInfoChanges()
-                  .checkIfSuccessConfirmationPopUpAppears();
+                .changeUserFirstName(NEW_FIRST_NAME)
+                .changeUserLastName(NEW_LAST_NAME)
+                .changeDriverLicenseNumber()
+                .changeDriverLicenseExpiryDate()
+                .changeNationality()
+                .changeMaritalStatus()
+                .saveMyInfoChanges()
+                .checkIfSuccessConfirmationPopUpAppears();
         takeScreenshot();
     }
 }

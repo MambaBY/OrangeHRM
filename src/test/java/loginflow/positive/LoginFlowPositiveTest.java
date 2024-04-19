@@ -15,7 +15,7 @@ import static constants.Constants.UserCredentials.VALID_LOGIN;
 import static constants.Constants.UserCredentials.VALID_PASSWORD;
 
 
-@Listeners({ ScreenShooter.class})
+@Listeners({ScreenShooter.class})
 public class LoginFlowPositiveTest extends BaseTest {
 
     @Test

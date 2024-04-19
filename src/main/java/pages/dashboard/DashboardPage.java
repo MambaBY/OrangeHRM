@@ -14,7 +14,7 @@ public class DashboardPage {
     private final SelenideElement pageTitle = $x("//span[@class='oxd-topbar-header-breadcrumb']");
     private final SelenideElement userDropdown = $x("//li[@class='oxd-userdropdown']");
 
-    /*
+    /**
      * Method is verifying page URL
      */
     public DashboardPage checkDashboardPageUrlAddress(){
@@ -22,7 +22,7 @@ public class DashboardPage {
         return this;
     }
 
-    /*
+    /**
      * Method is verifying page title
      */
     public DashboardPage checkPageTitle(){
@@ -31,7 +31,7 @@ public class DashboardPage {
        return this;
     }
 
-    /*
+    /**
      * Method is verifying that user label with dropdown is visible on the Dashboard page after user logged in
      */
     public DashboardPage checkUserDropdown(){

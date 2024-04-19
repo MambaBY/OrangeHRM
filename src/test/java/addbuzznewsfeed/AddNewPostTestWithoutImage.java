@@ -14,8 +14,8 @@ import static common.LeftMenuButtons.buzzMenu;
 import static constants.Constants.UserCredentials.VALID_LOGIN;
 import static constants.Constants.UserCredentials.VALID_PASSWORD;
 
-@Listeners({ ScreenShooter.class})
-public class AddNewPostTest extends BaseTest {
+@Listeners({ScreenShooter.class})
+public class AddNewPostTestWithoutImage extends BaseTest {
     @Test
     @Owner("spaulovich")
     @Step("Add a new post without an attachment to the feed.")

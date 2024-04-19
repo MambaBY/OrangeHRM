@@ -22,7 +22,7 @@ public class AddEmployeePage extends BasePage {
     public static String userLastName;
 
 
-    /*
+    /**
      * Method is verifying that page URL is correct
      */
     public AddEmployeePage checkAddEmployeePageUrlAddress(){
@@ -30,7 +30,7 @@ public class AddEmployeePage extends BasePage {
         return this;
     }
 
-    /*
+    /**
      * Method fills in First Name with random string value in the add employee form
      */
     public AddEmployeePage fillInFirstName () {
@@ -39,7 +39,7 @@ public class AddEmployeePage extends BasePage {
         return this;
     }
 
-    /*
+    /**
      * Method fills in Last Name with random string value in the add employee form
      */
     public AddEmployeePage fillInLastName() {
@@ -48,7 +48,7 @@ public class AddEmployeePage extends BasePage {
         return this;
     }
 
-    /*
+    /**
      * Method fills in user ID with random string value in the add employee form
      */
     public AddEmployeePage fillInEmployeeID() {
@@ -64,7 +64,7 @@ public class AddEmployeePage extends BasePage {
         return this;
     }
 
-    /*
+    /**
      * Method fills in username with random string value in the add employee form
      */
     public AddEmployeePage fillInUsername() {
@@ -72,7 +72,7 @@ public class AddEmployeePage extends BasePage {
         return this;
     }
 
-    /*
+    /**
      * Method fills in password field with random string value in the add employee form
      */
     public AddEmployeePage fillInPassword(String password) {
@@ -80,7 +80,7 @@ public class AddEmployeePage extends BasePage {
         return this;
     }
 
-    /*
+    /**
      * Method fills in password confirmation with random string value in the add employee form
      */
     public AddEmployeePage fillInPasswordConfirmation(String password) {
@@ -93,7 +93,7 @@ public class AddEmployeePage extends BasePage {
         return this;
     }
 
-    /*
+    /**
      * Method is verifying that confirmation popup appears after a new user creation
      */
     public AddEmployeePage checkIfSuccessConfirmationPopUpAppears() {

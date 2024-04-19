@@ -39,5 +39,4 @@ public class Constants {
         public static final int USER_ID_LENGTH = 8;
         public static final int USER_USER_NAME_LENGTH = 8;
     }
-
 }

@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 
-@Listeners({ ScreenShooter.class})
+@Listeners({ScreenShooter.class})
 public class LoginFlowNegativeTest extends BaseTest {
     @Test
     @Owner("spaulovich")

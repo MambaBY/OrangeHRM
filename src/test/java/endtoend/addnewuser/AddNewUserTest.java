@@ -15,7 +15,7 @@ import static constants.Constants.UserCredentials.VALID_LOGIN;
 import static constants.Constants.UserCredentials.VALID_PASSWORD;
 import static pages.addempoyee.AddEmployeePage.*;
 
-@Listeners({ ScreenShooter.class})
+@Listeners({ScreenShooter.class})
 public class AddNewUserTest extends BaseTest {
     @Test
     @Owner("spaulovich")
@@ -28,7 +28,7 @@ public class AddNewUserTest extends BaseTest {
                 .clickLoginButton();
         basePage.clickLeftSideMenuButton(pimMenu);
         pimPage.checkIfAddButtonVisible()
-               .clickAddButton();
+                .clickAddButton();
         addEmployeePage.checkAddEmployeePageUrlAddress()
                         .fillInFirstName()
                         .fillInLastName()

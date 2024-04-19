@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-@Listeners({ ScreenShooter.class})
+@Listeners({ScreenShooter.class})
 public class LogInWithCookiesTest extends BaseTest {
     @Test
     @Owner("spaulovich")

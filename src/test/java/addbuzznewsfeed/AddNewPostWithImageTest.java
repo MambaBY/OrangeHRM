@@ -11,14 +11,20 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 import static common.LeftMenuButtons.buzzMenu;
+import static constants.Constants.UserCredentials.VALID_LOGIN;
+import static constants.Constants.UserCredentials.VALID_PASSWORD;
 
-@Listeners({ ScreenShooter.class})
+@Listeners({ScreenShooter.class})
 public class AddNewPostWithImageTest extends BaseTest {
     @Test
     @Owner("spaulovich")
     @Step("Add a new post with a photo to the feed.")
     @Parameters({"newPostTextInPopUp"})
-    public void addNewPostWithImage(String newPostTextForThePopUp) throws IOException, InterruptedException {
+    public void addNewPostWithImage(String newPostTextForThePopUp) throws IOException {
+        basePage.openLoginPage();
+        loginPage.enterUserLogin(VALID_LOGIN)
+                .enterUserPassword(VALID_PASSWORD)
+                .clickLoginButton();
         basePage.clickLeftSideMenuButton(buzzMenu);
         buzzNewsFeedPage.clickSharePhotoButton()
                         .checkIfSharePhotoPopUpIsOpened()

@@ -11,7 +11,7 @@ import static common.GenerateRandomValues.generateRandomOptionInList;
 
 public class HelperMethods {
 
-    /*
+    /**
      * Method that clear pre-filled data in input fields
      */
     public static void clearInputField(SelenideElement element){
@@ -20,7 +20,7 @@ public class HelperMethods {
     }
 
 
-    /*
+    /**
      * Method that set new option for dropdown fields
      */
     public static void setNewOptionInDropDown(SelenideElement preSelectedElement,

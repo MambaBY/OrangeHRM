@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AddNewPostTests">
+    <test name="Add a new post without an image in the Buzz page">
+        <parameter name="newPostText" value="New post without an image!"/>
+        <classes>
+            <class name="addbuzznewsfeed.AddNewPostTestWithoutImage"/>
+        </classes>
+    </test>
+</suite>
+
+

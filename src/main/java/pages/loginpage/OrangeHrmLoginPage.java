@@ -48,7 +48,7 @@ public class OrangeHrmLoginPage extends BasePage {
         return this;
     }
 
-    /*
+    /**
      * Login to the app by setting the appropriate cookies.
      */
     public OrangeHrmLoginPage logInWithCookies() {

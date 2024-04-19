@@ -11,5 +11,5 @@ public class Config {
      * To keep browser open after suit
      * if false - browser closes
      */
-    public static final Boolean HOLD_BROWSER_CLOSED = false;
+    public static final Boolean IS_OPENED_FLAG = false;
 }

@@ -18,7 +18,7 @@ public class GenerateRandomValues {
         return RandomStringUtils.random(length, useLetters, useNumbers);
     }
 
-    /*
+    /**
      * Method that generates random string value(only numbers). Method is using for userID creation.
      */
     public static String generateRandomUserID(int length) {
@@ -27,7 +27,7 @@ public class GenerateRandomValues {
         return RandomStringUtils.random(length, useLetters, useNumbers);
     }
 
-    /*
+    /**
      * Method that generates random string value(letters and numbers). Method is using for driver license creation.
      */
     public static String generateRandomDriversLicenseNumber(int length) {
@@ -36,7 +36,7 @@ public class GenerateRandomValues {
         return RandomStringUtils.random(length, useLetters, useNumbers);
     }
 
-    /*
+    /**
      * Method that is selecting random value in the dropdown
      */
     public static String generateRandomOptionInList(ElementsCollection collection){
